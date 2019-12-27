@@ -246,6 +246,10 @@ body {
     overflow-y: hidden;
     transition-duration: .3s;
 }
+.absolute-select-options {
+    position: absolute;
+    top: 45px;
+}
 .select-options-open {
     max-height: 1000px;
     -webkit-box-shadow: 0px 0px 1px 0.5px rgba(175,175,175,1);
@@ -288,3 +292,10 @@ body {
     -webkit-filter: contrast(0) sepia(80%) hue-rotate(320deg) brightness(1.2) saturate(7);
     filter: contrast(0) sepia(80%) hue-rotate(320deg) brightness(1.2) saturate(7);
 }
+
+@media only screen and (max-width: 400px) {
+
+    .select-class {
+      width: 300px;
+    }
+  }

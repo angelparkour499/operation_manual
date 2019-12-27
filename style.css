@@ -292,6 +292,94 @@ body {
     -webkit-filter: contrast(0) sepia(80%) hue-rotate(320deg) brightness(1.2) saturate(7);
     filter: contrast(0) sepia(80%) hue-rotate(320deg) brightness(1.2) saturate(7);
 }
+.typo-flex {
+    text-align: center;
+}
+.h1 {
+    font-size: 31px;
+}
+.h2 {
+    font-size: 29px;
+}
+.h3 {
+    font-size: 27px;
+}
+.h4 {
+    font-size: 25px;
+}
+.h5 {
+    font-size: 23px;
+}
+.h6 {
+    font-size: 20px;
+}
+.h7 {
+    font-size: 19px;
+}
+.h8 {
+    font-size: 17px;
+}
+.h9 {
+    font-size: 15px;
+}
+@media only screen and (max-width: 640px) {
+    .h1 {
+        font-size: 27px;
+    }
+    .h2 {
+        font-size: 25px;
+    }
+    .h3 {
+        font-size: 23px;
+    }
+    .h4 {
+        font-size: 21px;
+    }
+    .h5 {
+        font-size: 19px;
+    }
+    .h6 {
+        font-size: 17px;
+    }
+    .h7 {
+        font-size: 17px;
+    }
+    .h8 {
+        font-size: 17px;
+    }
+    .h9 {
+        font-size: 15px;
+    }   
+}
+@media only screen and (max-width: 480px) {
+    .h1 {
+        font-size: 25px;
+    }
+    .h2 {
+        font-size: 23px;
+    }
+    .h3 {
+        font-size: 21px;
+    }
+    .h4 {
+        font-size: 18px;
+    }
+    .h5 {
+        font-size: 16px;
+    }
+    .h6 {
+        font-size: 15px;
+    }
+    .h7 {
+        font-size: 14px;
+    }
+    .h8 {
+        font-size: 14px;
+    }
+    .h9 {
+        font-size: 13px;
+    }   
+}
 
 @media only screen and (max-width: 400px) {
 

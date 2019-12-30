@@ -16,7 +16,7 @@ body {
 /*button design*/
 .switch {
     position: absolute;
-    top: -70px;
+    top: -40px;
     right: 20%;
     display: inline-block;
     width: 60px;
@@ -76,12 +76,29 @@ body {
   .slider.round:before {
     border-radius: 50%;
   }
+  .button-spread {
+      display: flex;
+      padding-top: 40px;
+  }
+  .button-spread:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  .primary-wrapper {
+      position: relative;
+      width: 60%;
+      display: flex;
+    justify-content: center;
+  }
 .button-wrapper {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     margin-bottom: 30px;
     position: relative;
+  }
+  .button-versions {
+      position: absolute;
+      top: -20px;
   }
   .button-container {
     display: flex;
@@ -174,6 +191,7 @@ body {
       cursor: pointer;
     -webkit-box-shadow: 0px 2.5px 0px 0px rgba(0,0,0,0.1);
   box-shadow: 0px 2.5px 0px 0px rgba(0,0,0,0.1);
+  margin-top: 30px; 
     }
     .button:hover {
         background-color: #fc4d12;
@@ -227,6 +245,7 @@ body {
     -webkit-box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
   -moz-box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
   box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
+  margin-top: 30px;
   }
   .secondary-button:hover {
     color: #999999;
@@ -248,7 +267,7 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
   }
   .secondary-button:disabled {
     background-color: #999999;
-    color: white;
+    color: #f5f5f5;
   }
 
   .btn-secondary-1 {
@@ -318,6 +337,9 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
       background-color: #999999;
       color: white;
       border: none;
+      -webkit-box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
+      -moz-box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
+      box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
   }
 
   .spread-line {
@@ -337,10 +359,11 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
 }
 .select-class {
     width: 300px;
-    height: 35px;
+    height: 50px;
     position: relative;
     border: 0.5px solid rgb(225, 225, 225);
     border-radius: 3px;
+    font-size: 15px;
     -webkit-box-shadow: 0px 2px 3px 0px rgba(225,225,225,1);
     -moz-box-shadow: 0px 2px 3px 0px rgba(225,225,225,1);
     box-shadow: 0px 2px 3px 0px rgba(225,225,225,1);
@@ -603,8 +626,8 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
       font-family: inherit;
       background-color: transparent;
       width: 350px;
-      height: 38px;
-      padding: 10px 10px 10px 10px;
+      height: 40px;
+      padding: 5px 10px;
       font-size: 18px;
       border-radius: 5px;
       border: 1px solid rgba(0,0,0, 0.12);
@@ -631,7 +654,7 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
       font-weight: normal;
       position: absolute;
       pointer-events: none;
-      left: 10px;
+      left: 20px;
       top: 50%;
       transform: translateY(-50%);
       transition: 0.2s ease all;
@@ -640,6 +663,7 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
   /* active state */
   .input-text:focus ~ .input-label, .input-text:valid ~ .input-label {
       top: 10px;
+      left: 10px;
       color: #999999;
       transition: 0.2s ease all;
       font-size: 14px;

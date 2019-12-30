@@ -4,23 +4,91 @@
 
 
 
-* {margin: 0; padding: 0; font-family: BariolRegular, "Bariol Regular","Helvetica Neue",Helvetica,Arial,sans-serif;}
+* {margin: 0; padding: 0; font-family: BariolRegular, "Bariol Regular","Helvetica Neue",Helvetica,Arial,sans-serif !important;}
 
 
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom:50%;
 }
+/*button design*/
+.switch {
+    position: absolute;
+    top: -70px;
+    right: 20%;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .cta-title {
+      margin-bottom: 20px;
+  }
 
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
 .button-wrapper {
     display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+    position: relative;
   }
   .button-container {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
+    width: 50%;
   }
   .btn1 {
     background-color: #F05825;
@@ -48,9 +116,9 @@ body {
     color: whitesmoke;
     font-size: 18px;
     background-color: #fc4d12;
-        -webkit-box-shadow: 0px 14px 18px -22px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 14px 18px -22px rgba(0,0,0,0.75);
-  box-shadow: 0px 3.5px 0px 0px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0px 5px 11px -4px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 5px 11px -4px rgba(0,0,0,0.5);
+  box-shadow: 0px 5px 11px -4px rgba(0,0,0,0.5);
     margin-bottom: 0;
   }
   .btn3 {
@@ -62,9 +130,9 @@ body {
     color: whitesmoke;
     font-size: 18px;
     background-color: #fc4d12;
-  -webkit-box-shadow: 0px 5px 11px -4px rgba(0,0,0,0.5);
-  -moz-box-shadow: 0px 5px 11px -4px rgba(0,0,0,0.5);
-  box-shadow: 0px 5px 11px -4px rgba(0,0,0,0.5);
+        -webkit-box-shadow: 0px 14px 18px -22px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 14px 18px -22px rgba(0,0,0,0.75);
+  box-shadow: 0px 3.5px 0px 0px rgba(0,0,0,0.1);
     margin-bottom: 0;
   }
   .btn4 {
@@ -81,15 +149,13 @@ body {
     margin: 10px;
     margin-bottom: 0;
   }
-   /* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
-  
    .button {
       background-color: #F05825;
       border-radius: 5px;
       border: none;
       width: 266px;
       height: 48px;
-      color: whitesmoke;
+      color: white;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -110,36 +176,28 @@ body {
   box-shadow: 0px 2.5px 0px 0px rgba(0,0,0,0.1);
     }
     .button:hover {
-      background-color: #fc4d12;
+        background-color: #fc4d12;
+        border-radius: 5px;
+    -webkit-box-shadow: 0px 5px 11px -4px rgba(0,0,0,0.5);
+    box-shadow: 0px 5px 11px -4px rgba(0,0,0,0.5);
+    }
+    .button:active {
+        background-color: #fc4d12;
         -webkit-box-shadow: 0px 14px 18px -22px rgba(0,0,0,0.75);
   box-shadow: 0px 3.5px 0px 0px rgba(0,0,0,0.1);
     margin-bottom: 0;
     }
-    .button:active {
-      background-color: #D64312;
-      border-radius: 5px;
-  -webkit-box-shadow: 0px 5px 11px -4px rgba(0,0,0,0.5);
-  box-shadow: 0px 5px 11px -4px rgba(0,0,0,0.5);
-    }
   .button:focus {
     outline: none;
   }
-    .button:visited {
-        background-color: #F05825;
-      border-radius: 5px;
-      border: none;
-      width: 266px;
-      height: 48px;
-      color: whitesmoke;
-      font-size: 18px;
-      mix-blend-mode: normal;
-    }
-  .container-5 {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+  .button:disabled {
+      background-color: #999999;
   }
+  .button:disabled:hover {
+    -webkit-box-shadow: 0px 2.5px 0px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 2.5px 0px 0px rgba(0,0,0,0.1);
+  }
+ 
   .btn5 {
     background-color: #999999;
       border-radius: 5px;
@@ -155,7 +213,7 @@ body {
   -moz-box-shadow: 0px 2.5px 0px 0px rgba(0,0,0,0.1);
   box-shadow: 0px 2.5px 0px 0px rgba(0,0,0,0.1);
   }
-  .btn6 {
+  .secondary-button {
       background-color: white;
       border-radius: 5px;
       border: none;
@@ -170,12 +228,105 @@ body {
   -moz-box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
   box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
   }
+  .secondary-button:hover {
+    color: #999999;
+    border: none;
+    background-color: #f0f0f0;
+    -webkit-box-shadow: 0px 5px 11px -4px rgba(0,0,0,0.5);
+    box-shadow: 0px 5px 11px -4px rgba(0,0,0,0.5);
+  }
+  .secondary-button:active {
+    color: #999999;
+    border: none;
+    background-color: #f0f0f0;
+    -webkit-box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
+-moz-box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
+box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
+  }
+  .secondary-button:focus {
+      outline: none;
+  }
+  .secondary-button:disabled {
+    background-color: #999999;
+    color: white;
+  }
+
+  .btn-secondary-1 {
+    background-color: white;
+    border-radius: 5px;
+    border: none;
+    width: 266px;
+    height: 48px;
+    color: #999999;
+    font-size: 18px;
+    mix-blend-mode: normal;
+    transition-duration: .3s;
+    cursor: pointer;
+  -webkit-box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
+-moz-box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
+box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
+  }
+  .btn-secondary-2 {
+      width: 266px;
+      height: 48px;
+      font-size: 18px;
+      color: #999999;
+      border: 1px solid #f0f0f0;
+      mix-blend-mode: normal;
+      cursor: pointer;
+      border-radius: 5px;
+      background-color: #f0f0f0;
+      -webkit-box-shadow: 0px 5px 11px -4px rgba(0,0,0,0.5);
+      box-shadow: 0px 5px 11px -4px rgba(0,0,0,0.5);
+  }
+  .btn-secondary-3 {
+      width: 266px;
+      height: 48px;
+      font-size: 18px;
+      mix-blend-mode: normal;
+      color: #999999;
+      cursor: pointer;
+      border-radius: 5px;
+      border: none;
+      background-color: #f0f0f0;
+      -webkit-box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
+-moz-box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
+box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
+  }
+  .btn-secondary-4 {
+    background-color: white;
+    border-radius: 5px;
+    border: none;
+    width: 266px;
+    height: 48px;
+    color: #999999;
+    font-size: 18px;
+    mix-blend-mode: normal;
+    transition-duration: .3s;
+    cursor: pointer;
+  -webkit-box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
+-moz-box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
+box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
+  }
+  .btn-secondary-5 {
+      width: 266px;
+      height: 48px;
+      font-size: 18px;
+      mix-blend-mode: normal;
+      cursor: pointer;
+      border-radius: 5px;
+      background-color: #999999;
+      color: white;
+      border: none;
+  }
+
   .spread-line {
       width: 100%;
       height: .5px;
       margin: 30px 0;
       background-color: #cdcdcd;
   }
+  /*dropdown design*/
 .select-container {
     display: flex;
     position: relative;
@@ -292,42 +443,106 @@ body {
     -webkit-filter: contrast(0) sepia(80%) hue-rotate(320deg) brightness(1.2) saturate(7);
     filter: contrast(0) sepia(80%) hue-rotate(320deg) brightness(1.2) saturate(7);
 }
+/*Typografy design*/
 .typo-flex {
     text-align: center;
 }
 .h1 {
-    font-size: 31px;
+    font-size: 47px;
 }
 .h2 {
-    font-size: 29px;
+    font-size: 44px;
 }
 .h3 {
-    font-size: 27px;
+    font-size: 42px;
 }
 .h4 {
-    font-size: 25px;
+    font-size: 40px;
 }
 .h5 {
-    font-size: 23px;
+    font-size: 38px;
 }
 .h6 {
-    font-size: 20px;
+    font-size: 36px;
 }
 .h7 {
-    font-size: 19px;
+    font-size: 34px;
 }
-.h8 {
-    font-size: 17px;
+@media only screen and (max-width: 1366px) {
+    .h1 {
+        font-size: 39px;
+    }
+    .h2 {
+        font-size: 36px;
+    }
+    .h3 {
+        font-size: 34px;
+    }
+    .h4 {
+        font-size: 30px;
+    }
+    .h5 {
+        font-size: 27px;
+    }
+    .h6 {
+        font-size: 25px;
+    }
+    .h7 {
+        font-size: 24px;
+    }
 }
-.h9 {
-    font-size: 15px;
+@media only screen and (max-width: 1280px) {
+    .h1 {
+        font-size: 37px;
+    }
+    .h2 {
+        font-size: 34px;
+    }
+    .h3 {
+        font-size: 32px;
+    }
+    .h4 {
+        font-size: 28px;
+    }
+    .h5 {
+        font-size: 24px;
+    }
+    .h6 {
+        font-size: 23px;
+    }
+    .h7 {
+        font-size: 22px;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .h1 {
+        font-size: 31px;
+    }
+    .h2 {
+        font-size: 29px;
+    }
+    .h3 {
+        font-size: 27px;
+    }
+    .h4 {
+        font-size: 25px;
+    }
+    .h5 {
+        font-size: 23px;
+    }
+    .h6 {
+        font-size: 20px;
+    }
+    .h7 {
+        font-size: 18px;
+    }
 }
 @media only screen and (max-width: 640px) {
     .h1 {
-        font-size: 27px;
+        font-size: 28px;
     }
     .h2 {
-        font-size: 25px;
+        font-size: 26px;
     }
     .h3 {
         font-size: 23px;
@@ -336,54 +551,115 @@ body {
         font-size: 21px;
     }
     .h5 {
-        font-size: 19px;
+        font-size: 20px;
     }
     .h6 {
-        font-size: 17px;
+        font-size: 18px;
     }
     .h7 {
         font-size: 17px;
     }
-    .h8 {
-        font-size: 17px;
-    }
-    .h9 {
-        font-size: 15px;
-    }   
 }
 @media only screen and (max-width: 480px) {
     .h1 {
         font-size: 25px;
     }
     .h2 {
-        font-size: 23px;
+        font-size: 22px;
     }
     .h3 {
-        font-size: 21px;
+        font-size: 20px;
     }
     .h4 {
-        font-size: 18px;
+        font-size: 19px;
     }
     .h5 {
-        font-size: 16px;
+        font-size: 17px;
     }
     .h6 {
-        font-size: 15px;
+        font-size: 15.5px;
     }
     .h7 {
         font-size: 14px;
     }
-    .h8 {
-        font-size: 14px;
-    }
-    .h9 {
-        font-size: 13px;
-    }   
 }
 
 @media only screen and (max-width: 400px) {
 
-    .select-class {
+    .input-class {
       width: 300px;
     }
+  }
+  /* Input design*/
+  .input {
+    font-family:
+      'Roboto','Helvetica','Arial',sans-serif;
+      position: relative;
+      width: 350px;
+  }
+  
+  .input-text {
+      position: relative;
+      font-family: inherit;
+      background-color: transparent;
+      width: 350px;
+      height: 38px;
+      padding: 10px 10px 10px 10px;
+      font-size: 18px;
+      border-radius: 5px;
+      border: 1px solid rgba(0,0,0, 0.12);
+  }
+  
+  /* Remove focus */
+  .input-text:focus {
+      outline: none;
+  }
+  
+      /* Use custom arrow */
+  .input .input-text {
+      appearance: none;
+      -webkit-appearance:none
+  }
+  
+  
+  
+  
+  /* LABEL ======================================= */
+  .input-label {
+      color: #333333;
+      font-size: 18px;
+      font-weight: normal;
+      position: absolute;
+      pointer-events: none;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: 0.2s ease all;
+  }
+  
+  /* active state */
+  .input-text:focus ~ .input-label, .input-text:valid ~ .input-label {
+      top: 10px;
+      color: #999999;
+      transition: 0.2s ease all;
+      font-size: 14px;
+  }
+  
+
+  /* active state */
+  .input-text:focus ~ .input-bar:before, .input-text:focus ~ .input-bar:after, .input-text:valid ~ .input-bar:before,
+  .input-text:valid ~ .input-bar:after
+  {
+      width: 50%;
+  }
+  
+  /* HIGHLIGHTER ================================== */
+  .input-highlight {
+      position: absolute;
+      height: 60%;
+      width: 100px;
+      top: 25%;
+      left: 0;
+      pointer-events: none;
+      opacity: 0.5;
   }

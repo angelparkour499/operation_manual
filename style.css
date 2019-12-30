@@ -358,7 +358,7 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
     margin-bottom: 20px;
 }
 .select-class {
-    width: 300px;
+    width: 400px;
     height: 50px;
     position: relative;
     border: 0.5px solid rgb(225, 225, 225);
@@ -392,17 +392,6 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
 }
 .select-class:focus::before {
     transform:rotateX(180deg);
-}
-.select-arrow-img {
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    top: 20px;
-    right: 15px;
-    z-index: 1;
-    pointer-events: none;
-    -webkit-filter: contrast(0) sepia(80%) hue-rotate(320deg) brightness(1.2) saturate(7);
-    filter: contrast(0) sepia(80%) hue-rotate(320deg) brightness(1.2) saturate(0);
 }
 
 .select-class:focus {

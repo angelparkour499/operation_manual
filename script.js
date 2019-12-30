@@ -58,17 +58,28 @@ function handle_value(e) {
     e.target.classList.add("selected-option")
     select.classList.remove("required-select")
 }
+var toggle_select = 0
+var click_count = 0
 select.addEventListener("focusin", select_enable) 
 select.addEventListener("focusout", select_disable) 
-
+select.addEventListener("click", select_disable_click)
 function select_enable(e) {
 select_options.classList.add("select-options-open")
+toggle_select = 1
 }
 function select_disable(e) {
     select_options.classList.remove("select-options-open")
+    click_count = 0
     }
 
 
-
-
+function select_disable_click(e) {
+click_count++
+if(click_count%2 == 0) {
+    select.blur()
+}
+else {
+    return
+}
+}
  

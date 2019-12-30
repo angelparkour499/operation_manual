@@ -446,14 +446,14 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
     color: black ;
 }
 .required-select {
-    border: 0.5px solid #F05825;
+    border: 0.5px solid #FF0100;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
 }
 .required-select::before {
     -webkit-filter: contrast(0) sepia(80%) hue-rotate(320deg) brightness(1.2) saturate(7);
-    filter: contrast(0) sepia(80%) hue-rotate(320deg) brightness(1.2) saturate(7);
+    filter: contrast(0) sepia(80%) hue-rotate(320deg) brightness(1.2) saturate(30);
 }
 /*Typografy design*/
 .typo-flex {

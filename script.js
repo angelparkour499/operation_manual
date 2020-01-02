@@ -119,16 +119,33 @@ var toggle_input = 0
                 inputs[i].innerText = ""
                 inputs[i].disabled = true
                 inputs[i].value = ""
+                inputs[i].classList.remove("required-input")
         }
         toggle_input = 0
      }
      else {
         for(var i = 0;i < inputs.length; i++) {
                 inputs[i].classList.remove("disable-input")
+                inputs[i].classList.remove("required-input")
                 inputs[i].placeholder = ""
                 inputs[i].innerHTML = input_content[i]
                 inputs[i].disabled = false
             }
         toggle_input = 1
+     }
+ }
+
+ function test_require (e) {
+     for(var i = 0; i < inputs.length; i++) {
+         if(inputs[i].disabled) {
+         }
+         else {
+             if(!inputs[i].validity.valid){
+            inputs[i].classList.add("required-input")
+        }
+        else {
+            inputs[i].classList.remove("required-input")
+         }
+         }
      }
  }

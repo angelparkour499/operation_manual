@@ -640,7 +640,7 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
       width: 350px;
       height: 40px;
       padding: 5px 10px;
-      padding-left: 20px;
+      padding-left: 30px;
       font-size: 16px;
       border-radius: 5px;
       border: 1px solid rgba(0,0,0, 0.12);
@@ -668,7 +668,7 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
       font-weight: normal;
       position: absolute;
       pointer-events: none;
-      left: 30px;
+      left: 40px;
       top: 50%;
       transform: translateY(-50%);
       transition: 0.2s ease all;
@@ -677,30 +677,20 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
   /* active state */
   .input-text:focus ~ .input-label, .input-text:valid ~ .input-label {
       top: 10px;
-      left: 20px;
+      left: 30px;
       color: #999999;
       transition: 0.2s ease all;
       font-size: 14px;
   }
   
+.input-icon {
+    position: absolute;
+    left: 10px;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+}
 
-  /* active state */
-  .input-text:focus ~ .input-bar:before, .input-text:focus ~ .input-bar:after, .input-text:valid ~ .input-bar:before,
-  .input-text:valid ~ .input-bar:after
-  {
-      width: 50%;
-  }
-  
-  /* HIGHLIGHTER ================================== */
-  .input-highlight {
-      position: absolute;
-      height: 60%;
-      width: 100px;
-      top: 25%;
-      left: 0;
-      pointer-events: none;
-      opacity: 0.5;
-  }
   .check-password {
     position: absolute;
     right: 0;
@@ -725,4 +715,10 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
   }
   .disable-input ~ label, .disable-input label {
 display: none;
+  }
+  .required-input {
+    border: 0.5px solid #FF0100;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
   }

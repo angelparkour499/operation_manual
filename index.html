@@ -125,24 +125,36 @@
 <h3>Normal text input</h3>
 <div class="input">
     <input type="text" data-input="0" class="input-text" required/>
-    <label class="input-label">Select</label>
+    <label class="input-label">Type</label>
 </div>
 </div>
 <div class="input-wrapper">
 <h3>Password input</h3>
 <div class="input">
-    <input type="password" data-input="1" disabled class="input-text" id="password" required>  <label class="input-label">Select</label>  <span class="check-password" id="check">Show</span>
+    <input type="password" data-input="1" disabled class="input-text" id="password" required>
+    <img class="input-icon" src="./assets/Vector.svg" alt="user">
+    <label class="input-label">Password</label>  <span class="check-password" id="check">Show</span>
     
 </div>
 </div>
 <div class="input-wrapper">
-<h3>Secondary input</h3>
+<h3>Secondary user input</h3>
 <div class="input">
-    <input type="password" data-input="2" class="input-text" required/>
-    <label class="input-label">Select</label>
+    <input type="text" data-input="2" class="input-text" required/>
+    <img class="input-icon" src="./assets/Group 253.svg" alt="user">
+    <label class="input-label">User</label>
 </div>
 </div>
+<div class="input-wrapper">
+    <h3>Secondary email input</h3>
+    <div class="input">
+        <input type="text" data-input="2" class="input-text" required/>
+        <img class="input-icon" src="./assets/Group 258.svg" alt="user">
+        <label class="input-label">Email</label>
+    </div>
+    </div>
 </div>
+<button onclick="test_require()">Test require</button>
     <script src="script.js"></script>
 </body>
 </html>

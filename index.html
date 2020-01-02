@@ -16,7 +16,7 @@
         <div class="primary-wrapper">
     <h3 class="button-versions">Primary button</h3>
 
-    <button id="button" class="button">Sample</button>
+    <button type="button" id="button" class="button">Sample</button>
     
 </div>
     <div class="button-wrapper">
@@ -26,23 +26,23 @@
             <span class="slider round"></span>
           </label>
       <div class="button-container">
-        <button class="btn1">Sample</button>
+        <button type="button" class="btn1">Sample</button>
         <p>(Unselected)</p>
             </div>
       <div class="button-container">
-        <button class="btn2">Sample</button>
+        <button type="button" class="btn2">Sample</button>
         <p>(Hover)</p>
         </div>
       <div class="button-container">
-        <button class="btn3">Sample</button>
+        <button type="button" class="btn3">Sample</button>
         <p>(Active)</p>
         </div>
       <div class="button-container">
-        <button class="btn4">Sample</button>
+        <button type="button" class="btn4">Sample</button>
         <p>(visited)</p>
         </div>
         <div class="button-container">
-            <button class="btn5">Sample</button>
+            <button type="button" class="btn5">Sample</button>
             <p>(disabled)</p>
         </div>
       
@@ -51,7 +51,7 @@
     <div class="button-spread">
         <div class="primary-wrapper">
     <h3 class="button-versions">Secondary button</h3>
-    <button class="secondary-button" id="secondary-button">Sample</button>
+    <button type="button" class="secondary-button" id="secondary-button">Sample</button>
     </div>
     <div class="button-wrapper">
         <h3 class="button-versions">Different versions</h3>
@@ -60,23 +60,23 @@
             <span class="slider round"></span>
           </label>
       <div class="button-container">
-        <button class="btn-secondary-1">Sample</button>
+        <button type="button" class="btn-secondary-1">Sample</button>
         <p>(Unselected)</p>
             </div>
       <div class="button-container">
-        <button class="btn-secondary-2">Sample</button>
+        <button type="button" class="btn-secondary-2">Sample</button>
         <p>(Hover)</p>
         </div>
       <div class="button-container">
-        <button class="btn-secondary-3">Sample</button>
+        <button type="button" class="btn-secondary-3">Sample</button>
         <p>(Active)</p>
         </div>
       <div class="button-container">
-        <button class="btn-secondary-4">Sample</button>
+        <button type="button" class="btn-secondary-4">Sample</button>
         <p>(visited)</p>
         </div>
         <div class="button-container">
-            <button class="btn-secondary-5">Sample</button>
+            <button type="button" class="btn-secondary-5">Sample</button>
             <p>(disabled)</p>
         </div>
       </div>
@@ -88,17 +88,17 @@
     <h3>dropdown build</h3>
    <div class="select-container">
     
-    <button id="select-id" class="select-class">Select
+    <button type="button" id="select-id" class="select-class">Select
     </button>
     
     <div class="select-options" id="select-options">
-        <button value="1" class="option">option 1</button>
-        <button value="2" class="option">option 2</button>
-        <button value="3" class="option">option 3</button>
-        <button value="4" class="option">option 4</button>
+        <button type="button" value="1" class="option">option 1</button>
+        <button type="button" value="2" class="option">option 2</button>
+        <button type="button" value="3" class="option">option 3</button>
+        <button type="button" value="4" class="option">option 4</button>
     </div>
 </div>
-    <button onclick="get_value()">Trigger</button>
+    <button type="button" onclick="get_value()">Trigger</button>
     
 <div class="spread-line"></div>    
 <div class="spread-line"></div>
@@ -111,14 +111,37 @@
     <h5 class="h5">Test H5 Academy blog and categories</h5>
     <h6 class="h6">Test H6 Home remodeling estimator</h6>
     <h6 class="h7">Test H7 Home pnc-estimator</h6>
+    <h1 class="kukun-h1">Home renovation cost estimator</h1>
 </div>
 <div class="spread-line"></div>
 <div class="spread-line"></div>
 <h2 class="cta-title">Input fields</h2>
+<div class="input-container">
+    <label class="switch">
+        <input type="checkbox" id="input-switch">
+        <span class="slider round"></span>
+      </label>
+    <div class="input-wrapper">
+<h3>Normal text input</h3>
 <div class="input">
-    <input type="text" class="input-text" required/>
-    <span class="input-bar"></span>
+    <input type="text" data-input="0" class="input-text" required/>
     <label class="input-label">Select</label>
+</div>
+</div>
+<div class="input-wrapper">
+<h3>Password input</h3>
+<div class="input">
+    <input type="password" data-input="1" disabled class="input-text" id="password" required>  <label class="input-label">Select</label>  <span class="check-password" id="check">Show</span>
+    
+</div>
+</div>
+<div class="input-wrapper">
+<h3>Secondary input</h3>
+<div class="input">
+    <input type="password" data-input="2" class="input-text" required/>
+    <label class="input-label">Select</label>
+</div>
+</div>
 </div>
     <script src="script.js"></script>
 </body>

@@ -11,7 +11,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom:50%;
+    padding-bottom:30%;
 }
 /*button design*/
 .switch {
@@ -381,6 +381,9 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
     width: 20px;
     height: 20px;
     content: "";
+    top: 0;
+    bottom: 0;
+    margin: auto;
     background: url("https://image.flaticon.com/icons/png/512/152/152411.png") center no-repeat;
     background-size: 20px;
     position: absolute;
@@ -411,7 +414,7 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
 }
 .absolute-select-options {
     position: absolute;
-    top: 45px;
+    top: 55px;
 }
 .select-options-open {
     max-height: 1000px;
@@ -461,6 +464,10 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
 }
 .h1 {
     font-size: 47px;
+}
+.kukun-h1 {
+    font-size: 45px;
+    color: #F05825;
 }
 .h2 {
     font-size: 44px;
@@ -530,6 +537,9 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
     .h1 {
         font-size: 31px;
     }
+    .kukun-h1 {
+        font-size: 43px;
+    }
     .h2 {
         font-size: 29px;
     }
@@ -552,6 +562,9 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
 @media only screen and (max-width: 640px) {
     .h1 {
         font-size: 28px;
+    }
+    .kukun-h1 {
+        font-size: 38px;
     }
     .h2 {
         font-size: 26px;
@@ -603,11 +616,21 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
     }
   }
   /* Input design*/
+  .input-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    position: relative;
+}
+.input-wrapper {
+    margin: 30px;
+    text-align: center;
+}
   .input {
     font-family:
       'Roboto','Helvetica','Arial',sans-serif;
       position: relative;
-      width: 350px;
+      width: auto;
   }
   
   .input-text {
@@ -617,9 +640,11 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
       width: 350px;
       height: 40px;
       padding: 5px 10px;
-      font-size: 18px;
+      padding-left: 20px;
+      font-size: 16px;
       border-radius: 5px;
       border: 1px solid rgba(0,0,0, 0.12);
+      color: #122448;
   }
   
   /* Remove focus */
@@ -638,12 +663,12 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
   
   /* LABEL ======================================= */
   .input-label {
-      color: #333333;
+      color: #122448;
       font-size: 18px;
       font-weight: normal;
       position: absolute;
       pointer-events: none;
-      left: 20px;
+      left: 30px;
       top: 50%;
       transform: translateY(-50%);
       transition: 0.2s ease all;
@@ -652,7 +677,7 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
   /* active state */
   .input-text:focus ~ .input-label, .input-text:valid ~ .input-label {
       top: 10px;
-      left: 10px;
+      left: 20px;
       color: #999999;
       transition: 0.2s ease all;
       font-size: 14px;
@@ -675,4 +700,29 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
       left: 0;
       pointer-events: none;
       opacity: 0.5;
+  }
+  .check-password {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 20%;
+    background-color: #3333;
+    border-radius: 0 5px 5px 0;
+    text-align: center;
+    padding: 14px 0;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+
+  .disable-input {
+      background-color: #A3B4B9;
+  }
+  .disable-input ~ .check-password {
+      display: none;
+  }
+  .disable-input::placeholder {
+      color: whitesmoke;
+  }
+  .disable-input ~ label, .disable-input label {
+display: none;
   }

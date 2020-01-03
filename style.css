@@ -57,11 +57,11 @@ body {
   }
   
   input:checked + .slider {
-    background-color: #2196F3;
+    background-color: #122448;
   }
   
   input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
+    box-shadow: 0 0 1px #122448;
   }
   
   input:checked + .slider:before {
@@ -439,14 +439,14 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
 }
 .option:active {
     background-color: #C4C4C4;
-    color: black ;
+    color: black;
 }
 .option:focus {
     outline: none;
 }
 .selected-option {
     background-color: #C4C4C4;
-    color: black ;
+    color: black;
 }
 .required-select {
     border: 0.5px solid #FF0100;
@@ -643,10 +643,16 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
       padding-left: 30px;
       font-size: 16px;
       border-radius: 5px;
-      border: 1px solid rgba(0,0,0, 0.12);
+      border: 1px solid #A3B4B9;
       color: #122448;
   }
   
+  .input-text:focus, .input-text:valid {
+    border: 1px solid #F05825 !important;
+}
+
+
+
   /* Remove focus */
   .input-text:focus {
       outline: none;
@@ -678,7 +684,7 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
   .input-text:focus ~ .input-label, .input-text:valid ~ .input-label {
       top: 10px;
       left: 30px;
-      color: #999999;
+      color: #333333;
       transition: 0.2s ease all;
       font-size: 14px;
   }

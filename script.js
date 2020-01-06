@@ -7,9 +7,11 @@ const checkbox_1 = document.getElementById("check")
 const password = document.getElementById("password")
 const inputs = document.querySelectorAll("[data-input]")
 const input_switch = document.getElementById("input-switch")
+const drop_checkbox = document.getElementById("drop-requirement")
 
 document.getElementById("button-switch").addEventListener("click", change_button)
 document.getElementById("secondary-button-switch").addEventListener("click", change_secondary_button)
+drop_checkbox.addEventListener("click", require_dropdown)
 
 function get_value() {
   var value = document.getElementById("select-id").value
@@ -18,6 +20,7 @@ function get_value() {
   }
   else {
       select.classList.add("required-select")
+      drop_checkbox.checked = true
   }
 }
 var toggle_button = 1
@@ -61,6 +64,7 @@ function handle_value(e) {
     }
     e.target.classList.add("selected-option")
     select.classList.remove("required-select")
+    
 }
 var toggle_select = 0
 var click_count = 0
@@ -85,6 +89,16 @@ if(click_count%2 == 0) {
 else {
     return
 }
+}
+function require_dropdown(e) {
+    if(select.className == "select-class") {
+        select.classList.add("required-select")
+        e.target.checked = true
+    }
+    else {
+        select.classList.remove("required-select")
+        e.target.checked = false
+    }
 }
 
  checkbox_1.addEventListener("click", show_password)

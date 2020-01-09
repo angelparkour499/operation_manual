@@ -183,6 +183,7 @@ body {
     margin-bottom: 0;
   }
    .button {
+       position: relative;
       background-color: #F05825;
       border-radius: 5px;
       border: none;
@@ -232,6 +233,20 @@ body {
     -webkit-box-shadow: 0px 2.5px 0px 0px rgba(0,0,0,0.1);
     box-shadow: 0px 2.5px 0px 0px rgba(0,0,0,0.1);
   }
+  .button-require::after {
+    width: auto;
+    height: auto;
+    content: "Not working";
+    padding-left: 20px;
+    background-image: url("./assets/error.svg");
+    background-size: 15px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    color: #ff0100;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+}
  
   .btn5 {
     background-color: #999999;

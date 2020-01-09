@@ -10,6 +10,8 @@ const input_switch = document.getElementById("input-switch")
 const drop_checkbox = document.getElementById("drop-requirement")
 const estimator_box = document.getElementsByClassName("estimator-box")
 
+
+button.addEventListener("click", show_error)
 document.getElementById("button-switch").addEventListener("click", change_button)
 document.getElementById("secondary-button-switch").addEventListener("click", change_secondary_button)
 drop_checkbox.addEventListener("click", require_dropdown)
@@ -36,6 +38,10 @@ else {
 }
 
     }
+
+function show_error(e) {
+    e.target.classList.add("button-require")
+}
 
     var toggle_button_2 = 1
 function change_secondary_button() {

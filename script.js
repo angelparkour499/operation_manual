@@ -8,6 +8,7 @@ const password = document.getElementById("password")
 const inputs = document.querySelectorAll("[data-input]")
 const input_switch = document.getElementById("input-switch")
 const drop_checkbox = document.getElementById("drop-requirement")
+const estimator_box = document.getElementsByClassName("estimator-box")
 
 document.getElementById("button-switch").addEventListener("click", change_button)
 document.getElementById("secondary-button-switch").addEventListener("click", change_secondary_button)
@@ -101,6 +102,19 @@ function require_dropdown(e) {
     }
 }
 
+for(var index = 0; index < estimator_box.length; index++){
+estimator_box[index].addEventListener("click", change_border)
+}
+
+function change_border(e) {
+    for(var index = 0; index < estimator_box.length; index++){
+        estimator_box[index].classList.remove("estimator-selected")
+        }   
+        e.target.classList.add("estimator-selected")
+}
+
+
+
  checkbox_1.addEventListener("click", show_password)
 
  function show_password(e) {
@@ -119,7 +133,6 @@ for(var i = 0;i < inputs.length; i++) {
     if(inputs[i].disabled) {
         input_content = inputs[i]
         inputs[i].classList.add("disable-input")
-        inputs[i].placeholder = "Disable"
     }
 }
  })()
@@ -129,10 +142,7 @@ var toggle_input = 0
      if(toggle_input) {
         for(var i = 0;i < inputs.length; i++) {
                 inputs[i].classList.add("disable-input")
-                inputs[i].placeholder = "Disable"
-                inputs[i].innerText = ""
                 inputs[i].disabled = true
-                inputs[i].value = ""
                 inputs[i].classList.remove("required-input")
         }
         toggle_input = 0
@@ -141,8 +151,6 @@ var toggle_input = 0
         for(var i = 0;i < inputs.length; i++) {
                 inputs[i].classList.remove("disable-input")
                 inputs[i].classList.remove("required-input")
-                inputs[i].placeholder = ""
-                inputs[i].innerHTML = input_content[i]
                 inputs[i].disabled = false
             }
         toggle_input = 1
@@ -156,9 +164,11 @@ var toggle_input = 0
          else {
              if(!inputs[i].validity.valid){
             inputs[i].classList.add("required-input")
+            inputs[i].classList.remove("granted-input")
         }
         else {
             inputs[i].classList.remove("required-input")
+            inputs[i].classList.add("granted-input")
          }
          }
      }

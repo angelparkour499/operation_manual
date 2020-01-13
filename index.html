@@ -16,7 +16,7 @@
         <div class="primary-wrapper">
     <h3 class="button-versions">Primary button</h3>
 
-    <button type="button" id="button" class="button">Sample</button>
+    <button type="button" id="button" class="button cta">Sample</button>
     
 </div>
     <div class="button-wrapper">
@@ -26,23 +26,23 @@
             <span class="slider round"></span>
           </label>
       <div class="button-container">
-        <button type="button" class="btn1">Sample</button>
+        <button type="button" class="btn1 cta">Sample</button>
         <p>(Unselected)</p>
             </div>
       <div class="button-container">
-        <button type="button" class="btn2">Sample</button>
+        <button type="button" class="btn2 cta">Sample</button>
         <p>(Hover)</p>
         </div>
       <div class="button-container">
-        <button type="button" class="btn3">Sample</button>
+        <button type="button" class="btn3 cta">Sample</button>
         <p>(Active)</p>
         </div>
       <div class="button-container">
-        <button type="button" class="btn4">Sample</button>
+        <button type="button" class="btn4 cta">Sample</button>
         <p>(visited)</p>
         </div>
         <div class="button-container">
-            <button type="button" class="btn5">Sample</button>
+            <button type="button" class="btn5 cta">Sample</button>
             <p>(disabled)</p>
         </div>
       
@@ -51,8 +51,8 @@
     <div class="button-spread">
         <div class="primary-wrapper">
     <h3 class="button-versions">Secondary button</h3>
-    <button type="button" class="secondary-button" id="secondary-button">Sample</button>
-    <button type="button" class="secondary-button" id="secondary-button"><img src="https://image.flaticon.com/icons/svg/109/109618.svg" alt=""> Previous</button>
+    <button type="button" class="secondary-button cta" id="secondary-button">Sample</button>
+    <button type="button" class="secondary-button cta" id="secondary-button"><img src="https://image.flaticon.com/icons/svg/109/109618.svg" alt=""> Previous</button>
     </div>
     <div class="button-wrapper">
         <h3 class="button-versions">Different versions</h3>
@@ -61,23 +61,23 @@
             <span class="slider round"></span>
           </label>
       <div class="button-container">
-        <button type="button" class="btn-secondary-1">Sample</button>
+        <button type="button" class="btn-secondary-1 cta">Sample</button>
         <p>(Unselected)</p>
             </div>
       <div class="button-container">
-        <button type="button" class="btn-secondary-2">Sample</button>
+        <button type="button" class="btn-secondary-2 cta">Sample</button>
         <p>(Hover)</p>
         </div>
       <div class="button-container">
-        <button type="button" class="btn-secondary-3">Sample</button>
+        <button type="button" class="btn-secondary-3 cta">Sample</button>
         <p>(Active)</p>
         </div>
       <div class="button-container">
-        <button type="button" class="btn-secondary-4">Sample</button>
+        <button type="button" class="btn-secondary-4 cta">Sample</button>
         <p>(visited)</p>
         </div>
         <div class="button-container">
-            <button type="button" class="btn-secondary-5">Sample</button>
+            <button type="button" class="btn-secondary-5 cta">Sample</button>
             <p>(disabled)</p>
         </div>
       </div>
@@ -85,8 +85,8 @@
 
 
         <div class="spread-line"></div>
-    <h2 class="cta-title">Dropdown design</h2>
-    <h3>dropdown build</h3>
+    <h2 class="cta-title">Droctaown design</h2>
+    <h3>droctaown build</h3>
    <div class="select-container">
     
     <button type="button" id="select-id" class="select-class">Select
@@ -100,7 +100,10 @@
     </div>
 </div>
 <div class="confirm-drop">
-<input type="checkbox" name="drop-requirement" id="drop-requirement">
+    <label class="checkbox-container">
+        <input type="checkbox" name="drop-requirement" id="drop-requirement">
+        <span class="checkmark"></span>
+      </label>
     <button type="button" onclick="get_value()">Trigger</button>
 </div>
     
@@ -121,8 +124,8 @@
             <div class="kukun-layer">
                 <h5 class="h5 small-banner-title">Kukun Business Solutions</h5>
                 <h1 class="h1 banner-title">The nation's largest normalized data set tied to property conditions</h1>
-                <p class="banner-content description">Everything you need to know about the condition of a residential or commercial property... <br/>all in one place, with Kukun</p>
-                <a href="#main-iframe" aria-label="Contact us" class="button header-banner-btn" id="ga-business-contact-us">Contact us</a>
+                <p class="banner-content content">Everything you need to know about the condition of a residential or commercial property... <br/>all in one place, with Kukun</p>
+                <a href="#main-iframe" aria-label="Contact us" class="button header-banner-btn cta" id="ga-business-contact-us">Contact us</a>
             </div>
         </div> 
     </div>
@@ -130,10 +133,10 @@
         <h2 class="page-titles h2 text-center"> What service are you interested in? </h2>
         <div class="row features-tabs tab-buttons-section text-center">
                 <div class="large-6 small-12 columns">
-                    <button class="pd button kukun-button interested-service"  id="defaultOpenTab"> Tools Widget and API </button>
+                    <button class="cta button kukun-button interested-service"  id="defaultOpenTab"> Tools Widget and API </button>
 			    </div>
                 <div class="large-6 small-12 columns">
-                   <button class="pd button kukun-button interested-service"  id="second-tab" disabled> Data &amp; Analytics </button>
+                   <button class="cta button kukun-button interested-service"  id="second-tab" disabled> Data &amp; Analytics </button>
 			    </div>
             </div> 
             <div class="content text-center middle-container">Provide your customers with a personalized, digital home improvement experience.</div><br>
@@ -170,15 +173,15 @@
         <div class="three-box">
             <div class="estimator-box">
                 <h6 class="h6">Addition</h6>
-                <p class="description">Adding new square footage to the house (require new foundation).</p>
+                <p class="content">Adding new square footage to the house (require new foundation).</p>
             </div>
             <div class="estimator-box">
                 <h6 class="h6">Renovation</h6>
-                <p class="description">Remodeling an existing space with no change to any walls</p>
+                <p class="content">Remodeling an existing space with no change to any walls</p>
             </div>
             <div class="estimator-box">
                 <h6 class="h6">Expansion</h6>
-                <p class="description">Expanding an existing room by moving walls within or outside the perimeter of the house (may require new additional foundation)</p>
+                <p class="content">Expanding an existing room by moving walls within or outside the perimeter of the house (may require new additional foundation)</p>
             </div>
         </div>
     </div>
@@ -197,7 +200,7 @@
     <div class="input-wrapper">
 <h3>Normal text input</h3>
 <div class="input">
-    <input type="text" data-input="0" class="input-text" required/>
+    <input type="text" data-input="0" class="input-text no-icon-input" required/>
     <label class="input-label">Text</label>
     <span class="alert">Place some text</span>
     <span class="granted">Done</span>
@@ -235,6 +238,21 @@
     </div>
 </div>
 <button onclick="test_require()">Test require</button>
+<div class="spread-line"></div>
+<div class="spread-line"></div>
+<h2 class="cta-title">Modal</h2>
+<h3>On pure js and CSS</h3>
+
+<div class="modal-background" id="modal-background">
+    <div class="modal">
+        <p id="modal-close">&#10060;</p>
+    </div>
+</div>
+<button class="button cta" id="modal-trigger" onclick="modal_trigger()">Modal trigger</button>
+
+
+
+
     <script src="script.js"></script>
 </body>
 </html>

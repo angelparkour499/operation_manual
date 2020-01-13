@@ -242,6 +242,7 @@ body {
     background-size: 15px;
     background-position: left center;
     background-repeat: no-repeat;
+    font-size: 17px;
     color: #ff0100;
     position: absolute;
     bottom: -20px;
@@ -408,7 +409,7 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
     position: relative;
     border: 0.5px solid rgb(225, 225, 225);
     border-radius: 3px;
-    font-size: 15px;
+    font-size: 18px;
     background-color: white;
     margin: auto;
     margin-top: 10px;
@@ -468,6 +469,7 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
     border: none;
     background-color: white;
     width: 100%;
+    font-size: 18px;
     text-align: left;
     color: #999999;
     height: 35px;
@@ -513,6 +515,72 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
         min-width: 290px;
     }
 }
+/* The container */
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 4px;
+    right: 43px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+  
+  /* Hide the browser's default checkbox */
+  .checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: transparent;
+    border: 3px solid #486973;
+    border-radius: 2px;
+  }
+  
+  
+  /* When the checkbox is checked, add a blue background */
+  .checkbox-container input:checked ~ .checkmark {
+    color: #486973;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .checkbox-container .checkmark:after {
+    left: 6px;
+    top: -1px;
+    width: 8px;
+    height: 17px;
+    border: solid #486973;
+    border-width: 0 5px 5px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
 /*Typografy design*/
 .typo-flex {
     text-align: center;
@@ -532,13 +600,13 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
     font-size: 48px;
 }
 .h4 {
-    font-size: 40px;
-}
-.h4-estimator {
     font-size: 37px;
 }
 .h5 {
-    font-size: 26px;
+    font-size: 28px;
+}
+.cta {
+    font-size: 21px;
 }
 .h6 {
     font-size: 23px;
@@ -546,25 +614,17 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
 .content {
     font-size: 21px;
 }
-.description {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 19px;
-    line-height: 1.3;
-    letter-spacing: 0
-}
 .link {
     font-size: 21px;
     color: #fb513c;
     text-decoration: none;
 }
+.notifications {
+    font-size: 20px;
+}
 @media only screen and (max-width: 1600px) {
     .h1 {
         font-size: 47px;
-    }
-    .kukun-h1 {
-        font-size: 45px;
-        color: #F05825;
     }
     .h2 {
         font-size: 44px;
@@ -573,57 +633,57 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
         font-size: 42px;
     }
     .h4 {
-        font-size: 40px;
-    }
-    .h4-estimator {
         font-size: 34px;
     }
     .h5 {
-        font-size: 24px;
+        font-size: 25px;
+    }
+    .cta {
+        font-size: 21px;
     }
     .h6 {
         font-size: 21px;
     }
     .content {
-        font-size: 20px;
-    }
-    .description {
         font-size: 18px;
     }
     .link {
         font-size: 20px;
     }
+    .notifications {
+        font-size: 19px;
+    }
 }
 @media only screen and (max-width: 1366px) {
     .h1 {
-        font-size: 41px;
+        font-size: 45px;
     }
     .h2 {
         font-size: 38px;
     }
     .h3 {
-        font-size: 36px;
+        font-size: 37px;
     }
     .h4 {
-        font-size: 30px;
-    }
-    .h4-estimator {
-        font-size: 24px;
+        font-size: 29px;
     }
     .h5 {
         font-size: 23px;
+    }
+    .cta {
+        font-size: 21px;
     }
     .h6 {
         font-size: 20px;
     }
     .content {
-        font-size: 19px;
-    }
-    .description {
         font-size: 18px;
     }
     .link {
         font-size: 19px;
+    }
+    .notifications {
+        font-size: 18px;
     }
 }
 @media only screen and (max-width: 1280px) {
@@ -637,13 +697,13 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
         font-size: 32px;
     }
     .h4 {
-        font-size: 28px;
-    }
-    .h4-estimator {
-        font-size: 23px;
+        font-size: 24px;
     }
     .h5 {
         font-size: 22px;
+    }
+    .cta {
+        font-size: 21px
     }
     .h6 {
         font-size: 19px;
@@ -651,19 +711,16 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
     .content {
         font-size: 18px;
     }
-    .description {
-        font-size: 17px;
-    }
     .link {
         font-size: 18px;
+    }
+    .notifications {
+        font-size: 17px;
     }
 }
 @media only screen and (max-width: 1024px) {
     .h1 {
         font-size: 33px;
-    }
-    .kukun-h1 {
-        font-size: 30px;
     }
     .h2 {
         font-size: 29px;
@@ -672,12 +729,12 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
         font-size: 27px;
     }
     .h4 {
-        font-size: 24px;
-    }
-    .h4-estimator {
         font-size: 22px;
     }
     .h5 {
+        font-size: 21px;
+    }
+    .cta {
         font-size: 21px;
     }
     .h6 {
@@ -686,19 +743,16 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
     .content {
         font-size: 17px;
     }
-    .description {
-        font-size: 16px;
-    }
     .link {
         font-size: 17px;
+    }
+    .notifications {
+        font-size: 16px;
     }
 }
 @media only screen and (max-width: 640px) {
     .h1 {
         font-size: 28px;
-    }
-    .kukun-h1 {
-        font-size: 25px;
     }
     .h2 {
         font-size: 24px;
@@ -707,13 +761,13 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
         font-size: 23px;
     }
     .h4 {
-        font-size: 21px;
-    }
-    .h4-estimator {
         font-size: 20px;
     }
     .h5 {
         font-size: 20px;
+    }
+    .cta {
+        font-size: 21px;
     }
     .h6 {
         font-size: 17px;
@@ -721,11 +775,11 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
     .content {
         font-size: 16px;
     }
-    .description {
-        font-size:  14px;
-    }
     .link {
         font-size: 15px;
+    }
+    .notifications {
+        font-size: 14px;
     }
 }
 @media only screen and (max-width: 480px) {
@@ -739,13 +793,13 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
         font-size: 21px;
     }
     .h4 {
-        font-size: 20px;
-    }
-    .h4-estimator {
-        font-size: 19px
+        font-size: 19px;
     }
     .h5 {
         font-size: 18px;
+    }
+    .cta {
+        font-size: 17px;
     }
     .h6 {
         font-size: 16px;
@@ -753,72 +807,15 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
     .content {
         font-size: 15px;
     }
-    .description {
-        font-size: 14px;
-    }
     .link {
         font-size: 15px;
     }
-}
-
-@media only screen and (max-width: 400px) {
-
-    .input-class {
-      width: 300px;
+    .notifications {
+        font-size: 14px;
     }
-  }
-  /* Input design*/
-  .input-container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    position: relative;
-}
-.input-wrapper {
-    margin: 30px;
-    text-align: center;
-}
-  .input {
-    font-family:
-      'Roboto','Helvetica','Arial',sans-serif;
-      position: relative;
-      width: auto;
-  }
-  
-  .input-text {
-    position: relative;
-    font-family: inherit;
-    background-color: transparent;
-    width: 350px;
-    height: 50px;
-    padding: 5px 10px;
-    padding-left: 50px;
-    padding-top: 10px;
-    font-size: 16px;
-    border-radius: 4px;
-    border: 1px solid #A3B4B9;
-    color: #122448;
-    box-sizing: border-box;
-  }
-  
-  .input-text:focus, .input-text:valid {
-    border: 1px solid #F05825 !important;
 }
 
 
-
-  /* Remove focus */
-  .input-text:focus {
-      outline: none;
-  }
-  
-      /* Use custom arrow */
-  .input .input-text {
-      appearance: none;
-      -webkit-appearance:none
-  }
-  
-  
   /*
   kukun main iframe
   */
@@ -1107,7 +1104,69 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
         margin: 20px 0;
     }
 }
+@media only screen and (max-width: 400px) {
 
+    .input-class {
+      width: 300px;
+    }
+  }
+  /* Input design*/
+  .input-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    position: relative;
+}
+.input-wrapper {
+    margin: 30px;
+    text-align: center;
+}
+  .input {
+    font-family:
+      'Roboto','Helvetica','Arial',sans-serif;
+      position: relative;
+      width: auto;
+  }
+  
+  .input-text {
+    position: relative;
+    font-family: inherit;
+    background-color: transparent;
+    width: 350px;
+    height: 50px;
+    padding: 5px 10px;
+    padding-left: 50px;
+    padding-top: 10px;
+    font-size: 18px;
+    border-radius: 4px;
+    border: 1px solid #A3B4B9;
+    color: #122448;
+    box-sizing: border-box;
+  }
+  
+  .input-text:focus, .input-text:valid {
+    border: 1px solid #F05825 !important;
+}
+
+
+.no-icon-input {
+    padding-left: 25px;
+}
+.no-icon-input ~ .input-label {
+left: 30px;
+}
+  /* Remove focus */
+  .input-text:focus {
+      outline: none;
+  }
+  
+      /* Use custom arrow */
+  .input .input-text {
+      appearance: none;
+      -webkit-appearance:none
+  }
+  
+  
   /*----------------------------------------------------*/
   /* LABEL ======================================= */
   .input-label {
@@ -1146,6 +1205,7 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
     position: absolute;
     right: 0;
     height: 100%;
+    font-size: 18px;
     width: 20%;
     background-color: #3333;
     border-radius: 0 5px 5px 0;
@@ -1217,4 +1277,38 @@ display: none;
       background: url("./assets/error.svg") left no-repeat;
       background-size: 15px;
       margin-left: -20px;
+  }
+
+
+  /*modal*/
+  .modal-background {
+      display: none;
+      background-color: rgba(150,150,150,0.3);
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: 4;
+      justify-content: center;
+      align-items: center;
+  }
+  .modal {
+      position: relative;
+      background-color: #f7f7f7;
+      width: 50px;
+      opacity: 0;
+      height: auto;
+      min-height: 50px;
+      transition: width .3s, min-height .3s, opacity .2s;
+      border-radius: 5px;
+  }
+  .opened-modal {
+      opacity: 1;
+      width: 400px;
+      min-height: 500px;
+  }
+  #modal-close {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      cursor: pointer;
   }

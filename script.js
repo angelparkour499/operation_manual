@@ -9,6 +9,11 @@ const inputs = document.querySelectorAll("[data-input]")
 const input_switch = document.getElementById("input-switch")
 const drop_checkbox = document.getElementById("drop-requirement")
 const estimator_box = document.getElementsByClassName("estimator-box")
+const modal_button = document.getElementById("modal-trigger")
+const modal = document.getElementById("modal-background")
+const modal_content = document.querySelectorAll("#modal-background .modal")[0]
+const modal_icon = document.getElementById("modal-close")
+
 
 
 button.addEventListener("click", show_error)
@@ -134,6 +139,7 @@ function change_border(e) {
          e.target.innerText = "show"
      }
  }
+ 
 var input_content;
  (function(e) {
 for(var i = 0;i < inputs.length; i++) {
@@ -163,7 +169,7 @@ var toggle_input = 0
         toggle_input = 1
      }
  }
-
+ 
  function test_require (e) {
      for(var i = 0; i < inputs.length; i++) {
          if(inputs[i].disabled) {
@@ -178,5 +184,32 @@ var toggle_input = 0
             inputs[i].classList.add("granted-input")
          }
          }
+     }
+ }
+ 
+
+ /*Modal js*/
+modal_button.addEventListener("click", modal_trigger)
+modal_icon.addEventListener("click", close_modal)
+modal.onclick = function (e) {
+    if(e.target == modal_content) {
+       return
+    }
+    else {
+        close_modal()
+    }
+}
+ function modal_trigger (e) {
+     modal.style.display = "flex"
+     setTimeout(function(e) {modal_content.classList.add("opened-modal")}, 100)
+     window.addEventListener("keydown", close_modal)
+ }
+ function close_modal(e) {
+     if(e.target.type == "submit") {
+         console.log(e.target)
+     }
+     else{
+     setTimeout(function(e) {modal.style.display = "none"}, 200)
+     modal_content.classList.remove("opened-modal")
      }
  }

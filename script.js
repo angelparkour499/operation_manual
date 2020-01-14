@@ -196,7 +196,7 @@ modal.onclick = function (e) {
        return
     }
     else {
-        close_modal()
+        close_modal(e.target)
     }
 }
  function modal_trigger (e) {
@@ -205,11 +205,7 @@ modal.onclick = function (e) {
      window.addEventListener("keydown", close_modal)
  }
  function close_modal(e) {
-     if(e.target.type == "submit") {
-         console.log(e.target)
-     }
-     else{
      setTimeout(function(e) {modal.style.display = "none"}, 200)
      modal_content.classList.remove("opened-modal")
-     }
+     
  }

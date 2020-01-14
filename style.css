@@ -72,6 +72,9 @@ body {
   .slider.round {
     border-radius: 34px;
   }
+  input[type="checkbox"]:focus{
+    outline:0;
+}
   
   .slider.round:before {
     border-radius: 50%;
@@ -92,7 +95,7 @@ body {
         display: flex;
         justify-content: center;
         margin: auto;
-        margin-bottom: 40px;
+        margin-bottom: 60px;
     }
   }
   .button-spread:nth-child(even) {
@@ -227,7 +230,10 @@ body {
     outline: none;
   }
   .button:disabled {
-      background-color: #999999;
+    background-color: #cdcdcd;
+    color: #333333;
+    border: none;
+    box-shadow: none;
   }
   .button:disabled:hover {
     -webkit-box-shadow: 0px 2.5px 0px 0px rgba(0,0,0,0.1);
@@ -245,24 +251,22 @@ body {
     font-size: 17px;
     color: #ff0100;
     position: absolute;
-    bottom: -20px;
+    bottom: -27px;
     left: 0;
 }
  
   .btn5 {
-    background-color: #999999;
-      border-radius: 5px;
-      border: none;
       width: 266px;
       height: 48px;
-      color: whitesmoke;
       font-size: 18px;
       mix-blend-mode: normal;
       transition-duration: .3s;
       cursor: pointer;
-    -webkit-box-shadow: 0px 2.5px 0px 0px rgba(0,0,0,0.1);
-  -moz-box-shadow: 0px 2.5px 0px 0px rgba(0,0,0,0.1);
-  box-shadow: 0px 2.5px 0px 0px rgba(0,0,0,0.1);
+      background-color: #cdcdcd;
+      color: #333333;
+      border: none;
+      box-shadow: none;
+      border-radius: 5px;
   }
   .secondary-button {
       position: relative;
@@ -271,7 +275,7 @@ body {
       border: none;
       width: 266px;
       height: 48px;
-      color: #999999;
+      color: #333333;
       font-size: 18px;
       mix-blend-mode: normal;
       transition-duration: .3s;
@@ -279,7 +283,7 @@ body {
     -webkit-box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
   -moz-box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
   box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
-  border: 1px solid #999999;
+  border: 1px solid #333333;
   margin-top: 30px;
   }
   .secondary-button img {
@@ -287,20 +291,20 @@ body {
     left: 20px;
     width: 25px;
     height: 25px;
-    -webkit-filter: contrast(0) sepia(80%) hue-rotate(320deg) brightness(1.2) saturate(7);
-    filter: contrast(0) sepia(80%) hue-rotate(320deg) brightness(1.2) saturate(0);
+    -webkit-filter: contrast(0) sepia(80%) hue-rotate(320deg) brightness(0.6) saturate(7);
+    filter: contrast(0) sepia(80%) hue-rotate(320deg) brightness(0.6) saturate(0);
   }
   .secondary-button:hover {
-    color: #999999;
-    border: 1px solid #999999;
-    background-color: #f7f7f7;
+    color: #333333;
+    border: 1px solid #333333;
+    background-color: #ffffff;
     -webkit-box-shadow: 0px 5px 11px -4px rgba(0,0,0,0.5);
     box-shadow: 0px 5px 11px -4px rgba(0,0,0,0.5);
   }
   .secondary-button:active {
-    color: #999999;
-    border: 1px solid #999999;
-    background-color: #f7f7f7;
+    color: #333333;
+    border: 1px solid #333333;
+    background-color: #ffffff;
     -webkit-box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
 -moz-box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
 box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
@@ -309,17 +313,20 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
       outline: none;
   }
   .secondary-button:disabled {
-    background-color: #999999;
-    color: #f5f5f5;
+    background-color: #cdcdcd;
+    color: #333333;
+    border: none;
+    box-shadow: none;
   }
 
   .btn-secondary-1 {
+    position: relative;
     background-color: white;
     border-radius: 5px;
     border: none;
     width: 266px;
     height: 48px;
-    color: #999999;
+    color: #333333;
     font-size: 18px;
     mix-blend-mode: normal;
     transition-duration: .3s;
@@ -327,6 +334,7 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
   -webkit-box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
 -moz-box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
 box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
+border: 1px solid #999999;
   }
   .btn-secondary-2 {
       width: 266px;
@@ -544,8 +552,8 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
     position: absolute;
     top: 0;
     left: 0;
-    height: 25px;
-    width: 25px;
+    height: 20px;
+    width: 20px;
     background-color: transparent;
     border: 3px solid #486973;
     border-radius: 2px;
@@ -571,12 +579,12 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
   
   /* Style the checkmark/indicator */
   .checkbox-container .checkmark:after {
-    left: 6px;
-    top: -1px;
+    left: 4px;
+    top: -3px;
     width: 8px;
-    height: 17px;
+    height: 16px;
     border: solid #486973;
-    border-width: 0 5px 5px 0;
+    border-width: 0 4px 4px 0;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
@@ -588,10 +596,6 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
 }
 .h1 {
     font-size: 55px;
-}
-.kukun-h1 {
-    font-size: 53px;
-    color: #F05825;
 }
 .h2 {
     font-size: 51px;
@@ -735,7 +739,7 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
         font-size: 21px;
     }
     .cta {
-        font-size: 21px;
+        font-size: 19px;
     }
     .h6 {
         font-size: 18px;
@@ -767,7 +771,7 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
         font-size: 20px;
     }
     .cta {
-        font-size: 21px;
+        font-size: 18px;
     }
     .h6 {
         font-size: 17px;
@@ -1283,7 +1287,7 @@ display: none;
   /*modal*/
   .modal-background {
       display: none;
-      background-color: rgba(150,150,150,0.3);
+      background-color: rgba(0,0,0,0.45);
       position: fixed;
       width: 100%;
       height: 100%;
@@ -1300,6 +1304,8 @@ display: none;
       min-height: 50px;
       transition: width .3s, min-height .3s, opacity .2s;
       border-radius: 5px;
+      border: solid 1px #666666;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   }
   .opened-modal {
       opacity: 1;

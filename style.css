@@ -203,7 +203,7 @@ body {
           -ms-flex-align: center;
               align-items: center;
       text-decoration: none;
-      font-size: 18px;
+      font-size: 17px;
       mix-blend-mode: normal;
       -webkit-transition-duration: .3s;
            -o-transition-duration: .3s;
@@ -595,28 +595,25 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
     width: 100%;
 }
 .h1 {
-    font-size: 55px;
+    font-size: 47px;
 }
 .h2 {
-    font-size: 51px;
+    font-size: 44px;
 }
 .h3 {
-    font-size: 48px;
+    font-size: 42px;
 }
 .h4 {
-    font-size: 37px;
+    font-size: 34px;
 }
 .h5 {
-    font-size: 28px;
-}
-.cta {
-    font-size: 21px;
+    font-size: 25px;
 }
 .h6 {
-    font-size: 23px;
+    font-size: 21px;
 }
 .content {
-    font-size: 21px;
+    font-size: 19px;
 }
 .link {
     font-size: 21px;
@@ -626,71 +623,7 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
 .notifications {
     font-size: 20px;
 }
-@media only screen and (max-width: 1600px) {
-    .h1 {
-        font-size: 47px;
-    }
-    .h2 {
-        font-size: 44px;
-    }
-    .h3 {
-        font-size: 42px;
-    }
-    .h4 {
-        font-size: 34px;
-    }
-    .h5 {
-        font-size: 25px;
-    }
-    .cta {
-        font-size: 21px;
-    }
-    .h6 {
-        font-size: 21px;
-    }
-    .content {
-        font-size: 18px;
-    }
-    .link {
-        font-size: 20px;
-    }
-    .notifications {
-        font-size: 19px;
-    }
-}
-@media only screen and (max-width: 1366px) {
-    .h1 {
-        font-size: 45px;
-    }
-    .h2 {
-        font-size: 38px;
-    }
-    .h3 {
-        font-size: 37px;
-    }
-    .h4 {
-        font-size: 29px;
-    }
-    .h5 {
-        font-size: 23px;
-    }
-    .cta {
-        font-size: 21px;
-    }
-    .h6 {
-        font-size: 20px;
-    }
-    .content {
-        font-size: 18px;
-    }
-    .link {
-        font-size: 19px;
-    }
-    .notifications {
-        font-size: 18px;
-    }
-}
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 1024px) {
     .h1 {
         font-size: 37px;
     }
@@ -707,115 +640,19 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
         font-size: 22px;
     }
     .cta {
-        font-size: 21px
+        font-size: 16px;
     }
     .h6 {
         font-size: 19px;
     }
     .content {
-        font-size: 18px;
-    }
-    .link {
-        font-size: 18px;
-    }
-    .notifications {
-        font-size: 17px;
-    }
-}
-@media only screen and (max-width: 1024px) {
-    .h1 {
-        font-size: 33px;
-    }
-    .h2 {
-        font-size: 29px;
-    }
-    .h3 {
-        font-size: 27px;
-    }
-    .h4 {
-        font-size: 22px;
-    }
-    .h5 {
-        font-size: 21px;
-    }
-    .cta {
         font-size: 19px;
-    }
-    .h6 {
-        font-size: 18px;
-    }
-    .content {
-        font-size: 17px;
     }
     .link {
         font-size: 17px;
     }
     .notifications {
         font-size: 16px;
-    }
-}
-@media only screen and (max-width: 640px) {
-    .h1 {
-        font-size: 28px;
-    }
-    .h2 {
-        font-size: 24px;
-    }
-    .h3 {
-        font-size: 23px;
-    }
-    .h4 {
-        font-size: 20px;
-    }
-    .h5 {
-        font-size: 20px;
-    }
-    .cta {
-        font-size: 18px;
-    }
-    .h6 {
-        font-size: 17px;
-    }
-    .content {
-        font-size: 16px;
-    }
-    .link {
-        font-size: 15px;
-    }
-    .notifications {
-        font-size: 14px;
-    }
-}
-@media only screen and (max-width: 480px) {
-    .h1 {
-        font-size: 25px;
-    }
-    .h2 {
-        font-size: 22px;
-    }
-    .h3 {
-        font-size: 21px;
-    }
-    .h4 {
-        font-size: 19px;
-    }
-    .h5 {
-        font-size: 18px;
-    }
-    .cta {
-        font-size: 17px;
-    }
-    .h6 {
-        font-size: 16px;
-    }
-    .content {
-        font-size: 15px;
-    }
-    .link {
-        font-size: 15px;
-    }
-    .notifications {
-        font-size: 14px;
     }
 }
 

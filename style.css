@@ -19,8 +19,8 @@ body {
     top: -40px;
     right: 20%;
     display: inline-block;
-    width: 50px;
-    height: 26px;
+    width: 45px;
+    height: 23px;
 }
   
   .switch input { 
@@ -49,8 +49,8 @@ body {
     content: "";
     height: 17px;
     width: 17px;
-    left: 4px;
-    bottom: 4px;
+    left: 3px;
+    bottom: 3px;
     background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
@@ -65,9 +65,9 @@ body {
   }
   
   input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
+    -webkit-transform: translateX(21px);
+    -ms-transform: translateX(21px);
+    transform: translateX(21px);
   }
   .slider.round {
     border-radius: 34px;
@@ -1058,6 +1058,7 @@ left: 30px;
   
   .disable-input {
       background-color: #A3B4B9;
+      padding-top: 5px;
   }
   .disable-input ~ .check-password {
       display: none;
@@ -1069,7 +1070,6 @@ left: 30px;
 display: none;
   }
   .disable-input ~ .input-icon {
-      top: 9px;
     -webkit-filter: contrast(0) sepia(80%) hue-rotate(320deg) brightness(1.2) saturate(7);
     filter: contrast(0) sepia(80%) hue-rotate(320deg) brightness(0) saturate(0);
   }
@@ -1154,4 +1154,14 @@ display: none;
       top: 5px;
       right: 5px;
       cursor: pointer;
+      transition-duration: .3s;
+  }
+  #modal-close:hover {
+      background-color: #486973;
+  }
+  #modal-close path {
+      fill: black;
+  }
+  #modal-close:hover path {
+      fill: white;
   }

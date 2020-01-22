@@ -13,8 +13,9 @@ const modal_button = document.getElementById("modal-trigger")
 const modal = document.getElementById("modal-background")
 const modal_content = document.querySelectorAll("#modal-background .modal")[0]
 const modal_icon = document.getElementById("modal-close")
-
-
+const tabs_1 = document.getElementsByClassName("tab-division")
+const tab_dropdown = document.getElementById("tab-dropdown")
+const tab_target_dropdown = document.querySelector("[data-tab='target']")
 
 button.addEventListener("click", show_error)
 secondary_button.addEventListener("click", show_error)
@@ -209,3 +210,15 @@ modal.onclick = function (e) {
      modal_content.classList.remove("opened-modal")
      
  }
+
+tab_target_dropdown.addEventListener("click", tab_drop)
+
+function tab_drop(e) {
+    if(tab_dropdown.classList.contains("expanded-tab")) {
+        tab_dropdown.classList.remove("expanded-tab")        
+    }
+    else {
+        tab_dropdown.classList.add("expanded-tab")
+    }
+
+}

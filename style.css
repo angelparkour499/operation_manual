@@ -203,7 +203,6 @@ body {
           -ms-flex-align: center;
               align-items: center;
       text-decoration: none;
-      font-size: 17px;
       mix-blend-mode: normal;
       -webkit-transition-duration: .3s;
            -o-transition-duration: .3s;
@@ -276,7 +275,6 @@ body {
       width: 266px;
       height: 48px;
       color: #333333;
-      font-size: 18px;
       mix-blend-mode: normal;
       transition-duration: .3s;
       cursor: pointer;
@@ -1168,4 +1166,141 @@ display: none;
   }
   #modal-close:hover path {
       fill: white;
+  }
+  /*tab radios*/
+  .tab-wrapper {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+  }
+
+  .tab-division {
+      width: 250px;
+      height: auto;
+      min-height: 70px;
+      max-height: 500px;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      border: 0.5px solid #A3B4B9;
+      border-radius: 4px;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.124321);
+      margin: 20px;
+      box-sizing: border-box;
+      cursor: pointer;
+  }
+
+  .tab-container {
+      position: relative;
+      display: block;
+  }
+  .tab-container input {
+      position: absolute;
+      opacity: 0;
+  }
+
+  .check-radio {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: auto;
+    min-height: 70px;
+    max-height: 500px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    border: 0.5px solid #A3B4B9;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.124321);
+    margin: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+  .tab-container input:checked ~ .check-radio {
+    border: 2px solid #F05825;
+    color: #F05825;
+}
+  .description-radio {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 378px;
+    height: auto;
+    min-height: 70px;
+    max-height: 500px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    border: 0.5px solid #A3B4B9;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.124321);
+    margin: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+  .tab-container input:checked ~ .description-radio {
+    border: 2px solid #F05825;
+}
+.tab-container input:checked ~ .description-radio .tab-title {
+    color: #F05825;
+}
+.tab-title {
+    margin-bottom: 10px;
+}
+.tab-paragraph {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+  .selected-tab {
+    border: 2px solid #F05825;
+  }
+  .selected-tab .tab-title {
+      color: #F05825;
+  }
+
+  .tab-dropdown {
+      width: 90%;
+      margin: auto;
+      border: 0.5px solid #A3B4B9;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.124321);
+      border-radius: 4px;
+      height: auto;
+      max-height: 48px;
+      cursor: pointer;
+      overflow-y: hidden;
+      transition: .4s linear;
+  }
+  .tab-dropdown-title {
+      height: 48px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding: 0 20px;
+  }
+  .tab-dropdown-angle {
+      position: absolute;
+      right: 20px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+  }
+  .tab-dropdown-content {
+      margin-top: 10px;
+      padding: 0 20px 20px;
+  }
+  .expanded-tab {
+      max-height: 1000px;
+  }
+  .expanded-tab .tab-dropdown-title {
+      border-bottom: 3px solid #F05825;
+  }
+  .expanded-tab .tab-dropdown-title .tab-dropdown-angle {
+      transform: rotatex(180deg)
   }

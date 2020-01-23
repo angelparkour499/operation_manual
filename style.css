@@ -253,6 +253,11 @@ body {
     bottom: -27px;
     left: 0;
 }
+@media only screen and (max-width: 480px) {
+    .button {
+        width: 150px
+    }
+}
  
   .btn5 {
       width: 266px;
@@ -289,8 +294,8 @@ body {
     left: 20px;
     width: 25px;
     height: 25px;
-    -webkit-filter: contrast(0) sepia(80%) hue-rotate(320deg) brightness(0.6) saturate(7);
-    filter: contrast(0) sepia(80%) hue-rotate(320deg) brightness(0.6) saturate(0);
+    -webkit-filter: contrast(0) sepia(80%) hue-rotate(320deg) brightness(0.8) saturate(7);
+    filter: contrast(0) sepia(80%) hue-rotate(320deg) brightness(0.8) saturate(0);
   }
   .secondary-button:hover {
     color: #333333;
@@ -316,6 +321,19 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
     border: none;
     box-shadow: none;
   }
+  @media only screen and (max-width: 480px) {
+    .secondary-button {
+        width: 150px
+    }
+    .secondary-button img {
+        position: absolute;
+        left: 15px;
+        width: 20px;
+        height: 20px;
+        -webkit-filter: contrast(0) sepia(80%) hue-rotate(320deg) brightness(0.6) saturate(7);
+        filter: contrast(0) sepia(80%) hue-rotate(320deg) brightness(0.6) saturate(0);
+      }
+}
 
   .btn-secondary-1 {
     position: relative;
@@ -400,6 +418,7 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
   /*dropdown design*/
 .select-container {
     display: flex;
+    width: 350px;
     position: relative;
     flex-direction: column;
     justify-content: center;
@@ -410,7 +429,7 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
     box-shadow: 0px 2px 3px 0px rgba(225,225,225,1);
 }
 .select-class {
-    width: 400px;
+    width: 350px;
     height: 48px;
     position: relative;
     border: 0.5px solid rgb(225, 225, 225);
@@ -418,7 +437,7 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
     font-size: 18px;
     background-color: white;
     margin: auto;
-    margin-top: 10px;
+    margin-top: 1px;
     margin-bottom: 0px;
     text-align: left;
     padding-left: 15px;
@@ -433,7 +452,7 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
     top: 0;
     bottom: 0;
     margin: auto;
-    background: url("https://image.flaticon.com/icons/png/512/152/152411.png") center no-repeat;
+    background: url("assets/dropdown.svg") center no-repeat;
     background-size: 20px;
     position: absolute;
     right: 10px;
@@ -1267,6 +1286,7 @@ display: none;
 
   .tab-dropdown {
       width: 90%;
+      max-width: 1200px;
       margin: auto;
       border: 0.5px solid #A3B4B9;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.124321);
@@ -1275,7 +1295,10 @@ display: none;
       max-height: 48px;
       cursor: pointer;
       overflow-y: hidden;
-      transition: .4s linear;
+      -webkit-transition: max-height 1.4s cubic-bezier(0, 1, 0, 1);
+      transition: .4s cubic-bezier(0, 1, 0, 1);;
+      box-sizing: border-box;
+      border-bottom: 0px solid #A3B4B9;
   }
   .tab-dropdown-title {
       height: 48px;
@@ -1297,6 +1320,7 @@ display: none;
   }
   .expanded-tab {
       max-height: 1000px;
+      transition: .3s ease-in-out;
   }
   .expanded-tab .tab-dropdown-title {
       border-bottom: 3px solid #F05825;

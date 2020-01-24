@@ -16,6 +16,7 @@ const modal_icon = document.getElementById("modal-close")
 const tabs_1 = document.getElementsByClassName("tab-division")
 const tab_dropdown = document.getElementById("tab-dropdown")
 const tab_target_dropdown = document.querySelector("[data-tab='target']")
+const tab_selector = document.getElementsByClassName("tab-selector")
 
 button.addEventListener("click", show_error)
 secondary_button.addEventListener("click", show_error)
@@ -221,4 +222,15 @@ function tab_drop(e) {
         tab_dropdown.classList.add("expanded-tab")
     }
 
+}
+
+for(var index= 0;index < tab_selector.length; index++) {
+    tab_selector[index].addEventListener("click", toggle_tab)
+}
+
+function toggle_tab(e) {
+    for(var index= 0;index < tab_selector.length; index++) {
+        tab_selector[index].classList.remove("tab-selector-used")
+    }
+    e.target.classList.add("tab-selector-used")
 }

@@ -115,7 +115,6 @@
     <h2 class="h2">Test H2 kukun brand estimator</h2>
     <h3 class="h3">Test H3 Kukun academy page</h3>
     <h4 class="h4">Test H4 Kukun academy category</h4>
-    <h4 class="h4-estimator">Test H4 estimator on kukun</h4>
     <h5 class="h5">Test H5 Academy blog and categories</h5>
     <h6 class="h6">Test H6 Home remodeling estimator</h6>
     <h2 style="margin-top: 30px;">Typografy test</h2>
@@ -139,6 +138,15 @@
                    <button class="cta button kukun-button interested-service"  id="second-tab" disabled> Data &amp; Analytics </button>
 			    </div>
             </div> 
+            <div class="content text-center middle-container">Provide your customers with a personalized, digital home improvement experience.</div><br>
+            <div class="content text-center middle-container">Kukun's full suite of digital solutions is available on a white-label basis. All of the popular home remodeling tools, content, and data &amp; analytics available on our website can be easily integrated into your existing digital ecosystem, with your branding, via widget or API.</div>
+      </div>
+      <div class="main-iframe-2">
+        <h2 class="page-titles h2 text-center"> What service are you interested in? </h2>
+        <ul class="tab-selector-list">
+            <li class="tab-selector tab-selector-middle tab-selector-used">Tools Widget and API</li>
+            <li class="tab-selector tab-selector-middle">Data & Analytics</li>
+        </ul>
             <div class="content text-center middle-container">Provide your customers with a personalized, digital home improvement experience.</div><br>
             <div class="content text-center middle-container">Kukun's full suite of digital solutions is available on a white-label basis. All of the popular home remodeling tools, content, and data &amp; analytics available on our website can be easily integrated into your existing digital ecosystem, with your branding, via widget or API.</div>
       </div>
@@ -244,8 +252,27 @@
 <h3>On pure js and CSS</h3>
 
 <div class="modal-background" id="modal-background">
-    <div class="modal">
-        <svg width="20" height="20" id="modal-close" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <div class="modal"data-modal="1">
+        <h4>1</h4>
+        <svg width="20" height="20"   id="modal-close" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="20" height="20" fill="none"/>
+            <path d="M15 5.45449L14.5455 5L10 9.54551L5.45449 5L5 5.45449L9.54551 10L5 14.5455L5.45449 15L10 10.4545L14.5455 15L15 14.5455L10.4545 10L15 5.45449Z" fill="white"/>
+            </svg>
+            
+            
+    </div>
+    <div class="modal"data-modal="2">
+        <h4>2</h4>
+        <svg width="20" height="20"  id="modal-close" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="20" height="20" fill="none"/>
+            <path d="M15 5.45449L14.5455 5L10 9.54551L5.45449 5L5 5.45449L9.54551 10L5 14.5455L5.45449 15L10 10.4545L14.5455 15L15 14.5455L10.4545 10L15 5.45449Z" fill="white"/>
+            </svg>
+            
+            
+    </div>
+    <div class="modal"data-modal="3">
+        <h4>3</h4>
+        <svg width="20" height="20"  id="modal-close" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="20" height="20" fill="none"/>
             <path d="M15 5.45449L14.5455 5L10 9.54551L5.45449 5L5 5.45449L9.54551 10L5 14.5455L5.45449 15L10 10.4545L14.5455 15L15 14.5455L10.4545 10L15 5.45449Z" fill="white"/>
             </svg>
@@ -253,7 +280,9 @@
             
     </div>
 </div>
-<button class="button cta" id="modal-trigger" onclick="modal_trigger()">Modal trigger</button>
+<button class="button cta modal-trigger" data-modal-trigger="1" id="modal-trigger">Modal trigger</button>
+<button class="button cta modal-trigger" data-modal-trigger="2" id="modal-trigger-2">Modal trigger</button>
+<button class="button cta modal-trigger" data-modal-trigger="3" id="modal-trigger-3">Modal trigger</button>
 <div class="spread-line"></div>
 <div class="spread-line"></div>
 
@@ -303,6 +332,22 @@
         </div>
     </div>
 </div>
+<div class="tab-wrapper" style="margin-top: 10px;">
+    <div class="tab-dropdown" id="tab-dropdown-2">
+        <div class="tab-dropdown-title" data-tab="target-2">sample <img src="./assets/dropdown.svg" alt="" class="tab-dropdown-angle"></div>
+        <div class="tab-dropdown-content">
+            <p class="tab-dropdown-paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident quam temporibus architecto tempore cum adipisci minus placeat iusto amet, omnis deserunt doloremque delectus aliquid iure velit suscipit est veritatis nisi aut autem rem modi dignissimos. Autem id adipisci voluptatem iste. Ipsum similique cupiditate rem consectetur! Voluptatibus illo temporibus illum exercitationem.</p>
+        </div>
+    </div>
+</div>
+<div class="tab-wrapper" style="margin-top: 10px;">
+    <div class="tab-dropdown" id="tab-dropdown-3">
+        <div class="tab-dropdown-title" data-tab="target-3">sample <img src="./assets/dropdown.svg" alt="" class="tab-dropdown-angle"></div>
+        <div class="tab-dropdown-content">
+            <p class="tab-dropdown-paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident quam temporibus architecto tempore cum adipisci minus placeat iusto amet, omnis deserunt doloremque delectus aliquid iure velit suscipit est veritatis nisi aut autem rem modi dignissimos. Autem id adipisci voluptatem iste. Ipsum similique cupiditate rem consectetur! Voluptatibus illo temporibus illum exercitationem.</p>
+        </div>
+    </div>
+</div>
 <h3>tab 4</h3>
 <div class="tab-selector-wrapper">
     <ul class="tab-selector-list">
@@ -312,6 +357,7 @@
     </ul>
     <p class="tab-show-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. At voluptatem quae sint quia odit minima, repellat, animi suscipit quisquam nisi tempora quis, fugiat nihil cum molestiae expedita harum aspernatur reprehenderit?</p>
 </div>
+
     <script src="script.js"></script>
 </body>
 </html>

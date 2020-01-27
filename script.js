@@ -9,13 +9,17 @@ const inputs = document.querySelectorAll("[data-input]")
 const input_switch = document.getElementById("input-switch")
 const drop_checkbox = document.getElementById("drop-requirement")
 const estimator_box = document.getElementsByClassName("estimator-box")
-const modal_button = document.getElementById("modal-trigger")
+const modal_button = document.getElementsByClassName("modal-trigger")
 const modal = document.getElementById("modal-background")
-const modal_content = document.querySelectorAll("#modal-background .modal")[0]
+const modal_content = document.querySelectorAll(".modal-background .modal")
 const modal_icon = document.getElementById("modal-close")
 const tabs_1 = document.getElementsByClassName("tab-division")
 const tab_dropdown = document.getElementById("tab-dropdown")
+const tab_dropdown_2 = document.getElementById("tab-dropdown-2")
+const tab_dropdown_3 = document.getElementById("tab-dropdown-3")
 const tab_target_dropdown = document.querySelector("[data-tab='target']")
+const tab_target_dropdown_2 = document.querySelector("[data-tab='target-2']")
+const tab_target_dropdown_3 = document.querySelector("[data-tab='target-3']")
 const tab_selector = document.getElementsByClassName("tab-selector")
 
 button.addEventListener("click", show_error)
@@ -191,7 +195,10 @@ var toggle_input = 0
  
 
  /*Modal js*/
-modal_button.addEventListener("click", modal_trigger)
+for(var index = 0; index < modal_button.length; index++) {
+    modal_button[index].addEventListener("click", modal_trigger)
+}
+
 modal_icon.addEventListener("click", close_modal)
 modal.onclick = function (e) {
     if(e.target == modal_content) {
@@ -201,16 +208,30 @@ modal.onclick = function (e) {
         close_modal(e.target)
     }
 }
+
  function modal_trigger (e) {
-     modal.style.display = "flex"
-     setTimeout(function(e) {modal_content.classList.add("opened-modal")}, 100)
-     window.addEventListener("keydown", close_modal)
+
+modal.style.display = "flex"
+
+
+for(let index = 0; index < modal_content.length; index++) {
+    if(e.target.dataset.modalTrigger == modal_content[index].dataset.modal) {
+           setTimeout(() => modal_content[index].classList.add("opened-modal"), 100)
+
+    }
+}    
+
  }
  function close_modal(e) {
      setTimeout(function(e) {modal.style.display = "none"}, 200)
-     modal_content.classList.remove("opened-modal")
+     for(var index = 0; index < modal_content.length; index++) {
+     modal_content[index].classList.remove("opened-modal")
+     }
      
  }
+
+
+ /*dropdown*/
 
 tab_target_dropdown.addEventListener("click", tab_drop)
 
@@ -223,6 +244,33 @@ function tab_drop(e) {
     }
 
 }
+
+//
+tab_target_dropdown_2.addEventListener("click", tab_drop_2)
+
+function tab_drop_2(e) {
+    if(tab_dropdown_2.classList.contains("expanded-tab")) {
+        tab_dropdown_2.classList.remove("expanded-tab")        
+    }
+    else {
+        tab_dropdown_2.classList.add("expanded-tab")
+    }
+
+}
+
+//
+tab_target_dropdown_3.addEventListener("click", tab_drop_3)
+
+function tab_drop_3(e) {
+    if(tab_dropdown_3.classList.contains("expanded-tab")) {
+        tab_dropdown_3.classList.remove("expanded-tab")        
+    }
+    else {
+        tab_dropdown_3.classList.add("expanded-tab")
+    }
+
+}
+
 
 for(var index= 0;index < tab_selector.length; index++) {
     tab_selector[index].addEventListener("click", toggle_tab)

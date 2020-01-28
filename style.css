@@ -18,7 +18,7 @@ body {
 /*button design*/
 .switch {
     position: absolute;
-    top: -40px;
+    top: -30px;
     right: 20%;
     display: inline-block;
     width: 45px;
@@ -84,6 +84,7 @@ body {
   .button-spread {
       display: flex;
       padding-top: 40px;
+      max-width: 1440px;
   }
   @media only screen and (max-width: 850px) {
     .button-spread {
@@ -116,6 +117,7 @@ body {
     justify-content: center;
     margin-bottom: 30px;
     position: relative;
+    border-radius: 5px;2
   }
   .button-versions {
       position: absolute;
@@ -249,7 +251,7 @@ body {
     background-size: 15px;
     background-position: left center;
     background-repeat: no-repeat;
-    font-size: 17px;
+    font-size: 14px;
     color: #ff0100;
     position: absolute;
     bottom: -27px;
@@ -694,13 +696,22 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
     background-size: 100% 100%;
     height: 100%;
 }
+.bg-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto; 
+    max-width: 1440px;
+}
 .kukun-layer {
     background-color: rgba(229, 229, 229, .8);
     transform: rotate(20deg);
     position: absolute;
     height: 695px;
     width: 692px;
-    left: -39px;
+    left: -85px;
     top: -185px;
     border-bottom-right-radius: 140px
 }
@@ -748,6 +759,7 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
     align-items: center;
     width: 75%;
     margin: 30px auto;
+    max-width: 1440px;
 }
 .tab-buttons-section {
     display: flex;
@@ -758,6 +770,7 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
 .main-iframe-3 {
     width: 100%;
     height: auto;
+    max-width: 1440px;
 }
 .custom-mid-width {
     position: relative;
@@ -893,6 +906,13 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
         margin: 10px auto;
         display: block;
     }
+    .button-wrapper {
+        flex-flow: column wrap;
+        padding: 0 20px;
+    }
+    .main-iframe-1 {
+        height: 100vh;
+    }
 }
 @media screen and (max-width:540px) {
     .bg-banner {
@@ -907,6 +927,7 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
 }
 .estimator-iframe-1 {
     width: 100%;
+    max-width: 1440px;
     background-color: #f2f2f2;
     min-height: 200px;
     height: auto;
@@ -951,6 +972,7 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
 }
 .estimator-iframe-2 {
     width: 100%;
+    max-width: 1440px;
     background-color: #f2f2f2;
     height: auto;
     margin-top: 20px;
@@ -979,6 +1001,7 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
     flex-flow: row wrap;
     justify-content: center;
     position: relative;
+    max-width: 1440px;
 }
 .input-wrapper {
     margin: 30px;
@@ -1111,7 +1134,7 @@ display: none;
     width: 15px;
     height: 15px;
     position: absolute;
-    bottom: 0;
+    bottom: 1px;
     background: url("./assets/done.svg") left no-repeat;
     background-size: 15px;
     margin-left: -20px;
@@ -1137,7 +1160,7 @@ display: none;
       width: 15px;
       height: 15px;
       position: absolute;
-      bottom: 2px;
+      bottom: 1px;
       background: url("./assets/error.svg") left no-repeat;
       background-size: 15px;
       margin-left: -20px;
@@ -1167,11 +1190,21 @@ display: none;
       border: solid 1px #666666;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   }
-  .opened-modal {
+  .opened-modal-1 {
       opacity: 1;
-      width: 400px;
-      min-height: 500px;
+      width: 200px;
+      min-height: 300px;
   }
+  .opened-modal-2 {
+    opacity: 1;
+    width: 400px;
+    min-height: 500px;
+}
+.opened-modal-3 {
+    opacity: 1;
+    width: 700px;
+    min-height: 500px;
+}
   #modal-close {
     position: absolute;
     top: 0px;
@@ -1196,6 +1229,7 @@ display: none;
       display: flex;
       flex-flow: row wrap;
       justify-content: center;
+      max-width: 1440px;
   }
 
   .tab-division {
@@ -1291,7 +1325,6 @@ display: none;
 
   .tab-dropdown {
       width: 90%;
-      max-width: 1200px;
       margin: auto;
       border: 0.5px solid #A3B4B9;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.124321);
@@ -1335,6 +1368,7 @@ display: none;
   .tab-selector-wrapper {
       width: 100%;
       margin: auto;
+      max-width: 1440px;
   }
   .tab-selector-list {
       display: flex;

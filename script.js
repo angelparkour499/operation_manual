@@ -21,7 +21,8 @@ const tab_target_dropdown = document.querySelector("[data-tab='target']")
 const tab_target_dropdown_2 = document.querySelector("[data-tab='target-2']")
 const tab_target_dropdown_3 = document.querySelector("[data-tab='target-3']")
 const tab_selector = document.getElementsByClassName("tab-selector")
-
+const tab_paragraph = document.getElementsByClassName("tab-show-paragraph")[0]
+//button
 button.addEventListener("click", show_error)
 secondary_button.addEventListener("click", show_error)
 document.getElementById("button-switch").addEventListener("click", change_button)
@@ -68,7 +69,7 @@ else {
 
     }
 
-
+//dropdown
 for(var index = 0; index < options.length; index ++) {
     options[index].addEventListener("click", handle_value)
 }
@@ -213,10 +214,21 @@ modal.onclick = function (e) {
 
 modal.style.display = "flex"
 
-
 for(let index = 0; index < modal_content.length; index++) {
     if(e.target.dataset.modalTrigger == modal_content[index].dataset.modal) {
-           setTimeout(() => modal_content[index].classList.add("opened-modal"), 100)
+
+           
+           switch(e.target.dataset.modalTrigger){
+               case "1":
+                setTimeout(() => modal_content[index].classList.add("opened-modal-1"), 100)
+                   break;
+               case "2":
+                setTimeout(() => modal_content[index].classList.add("opened-modal-2"), 100)
+                   break;
+               case "3":
+                setTimeout(() => modal_content[index].classList.add("opened-modal-3"), 100)
+                   break;
+           }
 
     }
 }    
@@ -225,14 +237,16 @@ for(let index = 0; index < modal_content.length; index++) {
  function close_modal(e) {
      setTimeout(function(e) {modal.style.display = "none"}, 200)
      for(var index = 0; index < modal_content.length; index++) {
-     modal_content[index].classList.remove("opened-modal")
+     modal_content[index].classList.remove("opened-modal-1")
+     modal_content[index].classList.remove("opened-modal-2")
+     modal_content[index].classList.remove("opened-modal-3")
      }
      
  }
 
 
- /*dropdown*/
-
+ 
+//tab 3
 tab_target_dropdown.addEventListener("click", tab_drop)
 
 function tab_drop(e) {
@@ -271,7 +285,7 @@ function tab_drop_3(e) {
 
 }
 
-
+//tab 4
 for(var index= 0;index < tab_selector.length; index++) {
     tab_selector[index].addEventListener("click", toggle_tab)
 }
@@ -281,4 +295,15 @@ function toggle_tab(e) {
         tab_selector[index].classList.remove("tab-selector-used")
     }
     e.target.classList.add("tab-selector-used")
+    switch(e.target.dataset.tab) {
+        case "1":
+            tab_paragraph.innerText = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged"
+            break;
+        case "2":
+            tab_paragraph.innerText = " It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+            break;
+        case "3":
+            tab_paragraph.innerText = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using"
+            break;
+    }
 }

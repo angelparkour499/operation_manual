@@ -1205,7 +1205,7 @@ display: none;
     width: 700px;
     min-height: 500px;
 }
-  #modal-close {
+  .modal-close {
     position: absolute;
     top: 0px;
     right: 0px;
@@ -1215,13 +1215,13 @@ display: none;
     transition-duration: .3s;
     border-radius: 0 3px 0 0;
   }
-  #modal-close:hover {
+  .modal-close:hover {
       background-color: #486973;
   }
-  #modal-close path {
+  .modal-close path {
       fill: black;
   }
-  #modal-close:hover path {
+  .modal-close:hover path {
       fill: white;
   }
   /*tab radios*/

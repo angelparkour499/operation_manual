@@ -12,7 +12,7 @@ const estimator_box = document.getElementsByClassName("estimator-box")
 const modal_button = document.getElementsByClassName("modal-trigger")
 const modal = document.getElementById("modal-background")
 const modal_content = document.querySelectorAll(".modal-background .modal")
-const modal_icon = document.getElementById("modal-close")
+const modal_icon = document.getElementsByClassName("modal-close")
 const tabs_1 = document.getElementsByClassName("tab-division")
 const tab_dropdown = document.getElementById("tab-dropdown")
 const tab_dropdown_2 = document.getElementById("tab-dropdown-2")
@@ -200,7 +200,9 @@ for(var index = 0; index < modal_button.length; index++) {
     modal_button[index].addEventListener("click", modal_trigger)
 }
 
-modal_icon.addEventListener("click", close_modal)
+for (var index = 0; index < modal_icon.length; index++){
+    modal_icon[index].addEventListener("click", close_modal)
+}
 modal.onclick = function (e) {
     if(e.target == modal_content) {
        return

@@ -14,6 +14,7 @@ const modal = document.getElementById("modal-background")
 const modal_content = document.querySelectorAll(".modal-background .modal")
 const modal_icon = document.getElementsByClassName("modal-close")
 const tabs_1 = document.getElementsByClassName("tab-division")
+const tab_dropdowns = document.getElementsByClassName("tab-dropdown")
 const tab_dropdown = document.getElementById("tab-dropdown")
 const tab_dropdown_2 = document.getElementById("tab-dropdown-2")
 const tab_dropdown_3 = document.getElementById("tab-dropdown-3")
@@ -252,12 +253,12 @@ for(let index = 0; index < modal_content.length; index++) {
 tab_target_dropdown.addEventListener("click", tab_drop)
 
 function tab_drop(e) {
-    if(tab_dropdown.classList.contains("expanded-tab")) {
-        tab_dropdown.classList.remove("expanded-tab")        
-    }
-    else {
+
+        for(var index = 0; index < tab_dropdowns.length; index++) {
+            tab_dropdowns[index].classList.remove("expanded-tab")
+        }
         tab_dropdown.classList.add("expanded-tab")
-    }
+
 
 }
 
@@ -265,12 +266,10 @@ function tab_drop(e) {
 tab_target_dropdown_2.addEventListener("click", tab_drop_2)
 
 function tab_drop_2(e) {
-    if(tab_dropdown_2.classList.contains("expanded-tab")) {
-        tab_dropdown_2.classList.remove("expanded-tab")        
-    }
-    else {
+        for(var index = 0; index < tab_dropdowns.length; index++) {
+            tab_dropdowns[index].classList.remove("expanded-tab")
+        }
         tab_dropdown_2.classList.add("expanded-tab")
-    }
 
 }
 
@@ -278,12 +277,10 @@ function tab_drop_2(e) {
 tab_target_dropdown_3.addEventListener("click", tab_drop_3)
 
 function tab_drop_3(e) {
-    if(tab_dropdown_3.classList.contains("expanded-tab")) {
-        tab_dropdown_3.classList.remove("expanded-tab")        
-    }
-    else {
+        for(var index = 0; index < tab_dropdowns.length; index++) {
+            tab_dropdowns[index].classList.remove("expanded-tab")
+        }
         tab_dropdown_3.classList.add("expanded-tab")
-    }
 
 }
 

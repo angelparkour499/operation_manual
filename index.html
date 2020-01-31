@@ -353,16 +353,22 @@
 </div>
 <h3>tab 4</h3>
 <div class="tab-selector-wrapper">
-    <ul class="tab-selector-list">
-        <li class="tab-selector tab-selector-used" data-tab="1">Remodel Cost Estimator</li>
-        <li class="tab-selector" data-tab="2">My Dashboard</li>
-        <li class="tab-selector" data-tab="3">Find the right loan</li>
+    <div class="tab-selector-container">
+    <ul class="tab-selector-list" data-target="tab-carousel">
+        <li class="tab-selector tab-selector-used" data-action="tab-card" data-tab="1">Remodel Cost Estimator</li>
+        <li class="tab-selector" data-target="tab-card" data-tab="2">My Dashboard</li>
+        <li class="tab-selector" data-target="tab-card" data-tab="3">Find the right loan</li>
     </ul>
+    <div class="arrow-selector-wrapper">
+        <img data-action="left-arrow" src="./assets/carousel-arrow.svg"class="arrow-selector left-arrow" />
+        <img data-action="right-arrow" src="./assets/carousel-arrow.svg"class="arrow-selector right-arrow" />
+    </div>
+</div>
     <p class="tab-show-paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged</p>
 </div>
 <div class="spread-line"></div>
 <div class="spread-line"></div>
-<h2>Radio</h2>
+<h2 style="margin-bottom: 20px;">Radio</h2>
 <div class="radio-wrapper">
 <label class="radio-container">
     <input type="radio" checked="checked" name="radio">

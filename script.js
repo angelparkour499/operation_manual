@@ -23,6 +23,12 @@ const tab_target_dropdown_2 = document.querySelector("[data-tab='target-2']")
 const tab_target_dropdown_3 = document.querySelector("[data-tab='target-3']")
 const tab_selector = document.getElementsByClassName("tab-selector")
 const tab_paragraph = document.getElementsByClassName("tab-show-paragraph")[0]
+const carousel = document.querySelector("[data-target='tab-carousel']")
+const card = carousel.querySelector("[data-target='tab-card']")
+const leftButton = document.querySelector("[data-action='left-arrow']")
+const rightButton = document.querySelector("[data-action='right-arrow']")
+const cardStyle = card.currentStyle || window.getComputedStyle(card)
+const cardCount = carousel.querySelectorAll("[data-target='tab-card']").length
 //button
 button.addEventListener("click", show_error)
 secondary_button.addEventListener("click", show_error)
@@ -285,9 +291,67 @@ function tab_drop_3(e) {
 }
 
 //tab 4
-for(var index= 0;index < tab_selector.length; index++) {
+let offset = 0;
+var tab_position = 1
+function tab_query(x) {
+    if (x.matches) {
+        for(var index= 0;index < tab_selector.length; index++) {
+            tab_selector[index].removeEventListener("click", toggle_tab)
+        }
+        
+        leftButton.addEventListener("click", left_swipe)
+        rightButton.addEventListener("click", right_swipe)
+        window.addEventListener("resize", window_sizing)  
+    } else {
+        for(var index= 0;index < tab_selector.length; index++) {
     tab_selector[index].addEventListener("click", toggle_tab)
 }
+leftButton.removeEventListener("click", left_swipe)
+rightButton.removeEventListener("click", right_swipe)
+window.removeEventListener("resize", window_sizing)  
+    }
+  }
+
+  function left_swipe() {
+    const carouselWidth = carousel.offsetWidth;
+    
+
+
+  if (offset !== 0) {
+    offset += carouselWidth;
+    carousel.style.transform = "translateX("+offset+"px)";
+    tab_position -= 1
+    carousel_content(tab_position)
+  }
+}
+
+
+  function right_swipe() {
+    const carouselWidth = carousel.offsetWidth;
+    
+const maxX = -(cardCount * carouselWidth);
+
+  if(offset !== maxX) {
+    offset -= carouselWidth;
+    carousel.style.transform = "translateX("+offset+"px)";
+    tab_position += 1
+    carousel_content(tab_position)
+  }
+}
+function window_sizing() {carousel.style.transform = "translateX(0px)";
+offset = 0;
+tab_position = 1}
+
+
+
+  var tab_media = window.matchMedia("(max-width: 480px)")
+  tab_query(tab_media) 
+  tab_media.addListener(tab_query) 
+
+
+
+
+
 
 function toggle_tab(e) {
     for(var index= 0;index < tab_selector.length; index++) {
@@ -302,6 +366,20 @@ function toggle_tab(e) {
             tab_paragraph.innerText = " It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
             break;
         case "3":
+            tab_paragraph.innerText = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using"
+            break;
+    }
+}
+function carousel_content(e) {
+    
+   switch(e) {
+        case 1:
+            tab_paragraph.innerText = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged"
+            break;
+        case 2:
+            tab_paragraph.innerText = " It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+            break;
+        case 3:
             tab_paragraph.innerText = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using"
             break;
     }

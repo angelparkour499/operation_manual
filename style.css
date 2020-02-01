@@ -1305,7 +1305,7 @@ display: none;
     width: 378px;
     height: auto;
     min-height: 70px;
-    max-height: 500px;
+    max-height: 350px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -1313,7 +1313,7 @@ display: none;
     border: 0.5px solid #A3B4B9;
     border-radius: 4px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.124321);
-    margin: 20px;
+    margin: 5px 20px;
     padding: 10px;
     box-sizing: border-box;
     cursor: pointer;
@@ -1439,12 +1439,12 @@ display: none;
   }
   .left-arrow {
     transform: rotate(90deg);
-    width: 30px;
+    width: 25px;
     height: 50px;
   }
   .right-arrow {
     transform: rotate(-90deg);
-    width: 30px;
+    width: 25px;
     height: 50px;
   }
 
@@ -1470,6 +1470,7 @@ display: none;
 .radio-wrapper {
     display: flex;
     flex-flow: row nowrap;
+    margin-bottom: 30px;
 }
 
   .radio-container {
@@ -1536,11 +1537,38 @@ display: none;
   
   /* Style the indicator (dot/circle) */
   .radio-container .radio-checkmark:after {
-       top: 6px;
-      left: 6px;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: white;
+    left: 6px;
+    top: 1px;
+    width: 6px;
+    height: 12px;
+    border: solid #ffffff;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
   }
   
+  /*box shadow*/
+
+  .shadow-wrapper {
+      display: flex;
+      flex-flow: row wrap;
+  }
+  .shadow-box {
+      width: 150px;
+      height: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 20px;
+      margin: 0 20px;
+  }
+  .shadow-box-1 {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.124321);
+  }
+  .shadow-box-2 {
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.119226);
+  }
+  .shadow-box-3 {
+    box-shadow: 0px 16px 16px rgba(0, 0, 0, 0.25);
+  }

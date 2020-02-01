@@ -14,6 +14,9 @@ const modal = document.getElementById("modal-background")
 const modal_content = document.querySelectorAll(".modal-background .modal")
 const modal_icon = document.getElementsByClassName("modal-close")
 const tabs_1 = document.getElementsByClassName("tab-division")
+const tab_2 = document.getElementsByClassName("description-radio")
+const tab_2_paragraph = document.getElementsByClassName("tab-paragraph")
+const tab_2_load = document.getElementsByClassName("tab-load")
 const tab_dropdowns = document.getElementsByClassName("tab-dropdown")
 const tab_dropdown = document.getElementById("tab-dropdown")
 const tab_dropdown_2 = document.getElementById("tab-dropdown-2")
@@ -252,9 +255,108 @@ for(let index = 0; index < modal_content.length; index++) {
      }
      
  }
+//tab 2
+var paragraph_1 = tab_2_paragraph[0].innerText
+var new_p1;
+(function() {
+    var z = paragraph_1.split(" ")
+    if(z.length > 35) {
+     var c = z.slice(0, -z.length+10).join(" ")
+     document.getElementsByClassName("tab-paragraph")[0].innerText = c
+      new_p1 = c
+      tab_2_load[0].innerText = "load more"
+    }
+    else {
+      return
+    }
+  })()
+
+  var toggle_paragraph_1 = 1
+  function toggle_paragraph_content_1 (e) {
+    if(toggle_paragraph_1) {
+        document.getElementsByClassName("tab-paragraph")[0].innerText = paragraph_1
+        tab_2_load[0].innerText = "load less"
+        tab_2[0].style.height = "350px"
+      toggle_paragraph_1 = 0
+    }
+    else {
+        document.getElementsByClassName("tab-paragraph")[0].innerText = new_p1
+        tab_2_load[0].innerText = "load more"
+        tab_2[0].style.height = "auto"
+        toggle_paragraph_1 = 1
+    }
+  }
 
 
- 
+//
+var paragraph_2 = tab_2_paragraph[1].innerText
+var new_p2;
+(function() {
+    var z = paragraph_2.split(" ")
+    if(z.length > 35) {
+     var c = z.slice(0, -z.length+10).join(" ")
+     document.getElementsByClassName("tab-paragraph")[1].innerText = c
+      new_p2 = c
+      tab_2_load[1].innerText = "load more"
+    }
+    else {
+      return
+    }
+  })()
+
+  var toggle_paragraph_2 = 1
+  function toggle_paragraph_content_2 (e) {
+    if(toggle_paragraph_2) {
+        document.getElementsByClassName("tab-paragraph")[1].innerText = paragraph_2
+        tab_2_load[1].innerText = "load less"
+        tab_2[1].style.height = "350px"
+      toggle_paragraph_2 = 0
+    }
+    else {
+        document.getElementsByClassName("tab-paragraph")[1].innerText = new_p2
+        tab_2_load[1].innerText = "load more"
+        tab_2[1].style.height = "auto"
+        toggle_paragraph_2 = 1
+    }
+  }
+
+
+  //
+
+  var paragraph_3 = tab_2_paragraph[2].innerText
+var new_p3;
+(function() {
+    var z = paragraph_3.split(" ")
+    if(z.length > 35) {
+     var c = z.slice(0, -z.length+10).join(" ")
+     document.getElementsByClassName("tab-paragraph")[2].innerText = c
+      new_p3 = c
+      tab_2_load[2].innerText = "load more"
+    }
+    else {
+      return
+    }
+  })()
+
+  var toggle_paragraph_3 = 1
+  function toggle_paragraph_content_3 (e) {
+    if(toggle_paragraph_3) {
+        document.getElementsByClassName("tab-paragraph")[2].innerText = paragraph_3
+        tab_2_load[2].innerText = "load less"
+        tab_2[2].style.height = "350px"
+      toggle_paragraph_3 = 0
+    }
+    else {
+        document.getElementsByClassName("tab-paragraph")[2].innerText = new_p3
+        tab_2_load[2].innerText = "load more"
+        tab_2[2].style.height = "auto"
+        toggle_paragraph_3 = 1
+    }
+  }
+
+
+
+
 //tab 3
 tab_target_dropdown.addEventListener("click", tab_drop)
 

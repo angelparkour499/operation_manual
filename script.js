@@ -145,7 +145,7 @@ function change_border(e) {
 
 
  checkbox_1.addEventListener("click", show_password)
-
+/*show/hide password*/
  function show_password(e) {
      if(password.type === "password") {
          password.type = "text"

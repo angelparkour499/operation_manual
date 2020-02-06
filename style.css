@@ -147,9 +147,7 @@ body {
     cursor: pointer;
     margin: 10px;
     margin-bottom: 0;
-    -webkit-box-shadow: 0px 2.5px 0px 0px rgba(0,0,0,0.1);
-  -moz-box-shadow: 0px 2.5px 0px 0px rgba(0,0,0,0.1);
-  box-shadow: 0px 2.5px 0px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.118829);
   }
   .btn2 {
     width: 266px;
@@ -160,8 +158,7 @@ body {
     color: whitesmoke;
     font-size: 18px;
     background-color: #fc4d12;
-    -webkit-box-shadow: 0px 5px 11px -4px rgba(0,0,0,0.5);
-    box-shadow: 0px 5px 11px -4px rgba(0,0,0,0.5);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.118829);
     margin-bottom: 0;
   }
   .btn3 {
@@ -173,8 +170,7 @@ body {
     color: whitesmoke;
     font-size: 18px;
     background-color: #fc4d12;
-    -webkit-box-shadow: 0px 3.5px 0px 0px rgba(0,0,0,0.1);
-    box-shadow: 0px 3.5px 0px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.118829);
     margin-bottom: 0;
   }
   .btn4 {
@@ -214,8 +210,7 @@ body {
            -o-transition-duration: .3s;
               transition-duration: .3s;
       cursor: pointer;
-    -webkit-box-shadow: 0px 2.5px 0px 0px rgba(0,0,0,0.1);
-  box-shadow: 0px 2.5px 0px 0px rgba(0,0,0,0.1);
+      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.118829);
   margin-top: 30px; 
   box-sizing: border-box;
     }
@@ -259,6 +254,11 @@ body {
     bottom: -27px;
     left: 0;
 }
+.estimator-btn {
+    width: 30% !important;
+    max-width: 300px;
+    min-width: 266px;
+}
 @media only screen and (max-width: 480px) {
     .button {
         width: 150px
@@ -279,6 +279,9 @@ body {
         top: -30px;
         left: 10px;
     }
+    .button-container {
+        width: auto;
+      }
 }
  
   .btn5 {
@@ -456,9 +459,6 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
-    -webkit-box-shadow: 0px 2px 3px 0px rgba(225,225,225,1);
-    -moz-box-shadow: 0px 2px 3px 0px rgba(225,225,225,1);
-    box-shadow: 0px 2px 3px 0px rgba(225,225,225,1);
 }
 .select-class {
     width: 350px;
@@ -586,6 +586,7 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
     position: relative;
     display: flex;
     justify-content: center;
+    padding-left: 100px;
 }
 /* The container */
 .checkbox-container {
@@ -695,6 +696,9 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
     text-decoration: none;
 }
 .notifications {
+    font-size: 16px;
+}
+.conditions {
     font-size: 14px;
 }
 @media only screen and (max-width: 1024px) {
@@ -726,6 +730,9 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
         font-size: 17px;
     }
     .notifications {
+        font-size: 16px;
+    }
+    .conditions {
         font-size: 14px;
     }
 }
@@ -1321,7 +1328,6 @@ display: none;
     align-items: center;
     border: 0.5px solid #A3B4B9;
     border-radius: 4px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.124321);
     margin: 20px;
     box-sizing: border-box;
     cursor: pointer;
@@ -1344,7 +1350,6 @@ display: none;
     align-items: center;
     border: 0.5px solid #A3B4B9;
     border-radius: 4px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.124321);
     margin: 5px 20px;
     padding: 10px;
     box-sizing: border-box;
@@ -1376,7 +1381,6 @@ display: none;
       width: 90%;
       margin: auto;
       border: 0.5px solid #A3B4B9;
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.124321);
       border-radius: 4px;
       height: auto;
       max-height: 48px;

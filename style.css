@@ -762,52 +762,62 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
     margin: auto; 
     max-width: 1440px;
 }
+.container-layer {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    max-width: 1440px;
+}
+.layer-content {
+    position: absolute;
+    top: 155px;
+    right: -50px;
+    transform: rotate(-20deg);
+}
 .kukun-layer {
     background-color: rgba(229, 229, 229, .8);
     transform: rotate(20deg);
     position: absolute;
-    height: 695px;
-    width: 692px;
+    height: 41vw;
+    min-height: 650px;
+    width: 46vw;
+    min-width: 695px;
     left: -85px;
     top: -185px;
-    border-bottom-right-radius: 140px
+    border-bottom-right-radius: 140px;
 }
 .small-banner-title {
-    position: absolute;
+    /*position: absolute;*/
     width: 600px;
-    top: 210px;
-    left: 85px;
+    /*top: 210px;
+    left: 85px;*/
     color: #333;
-    transform: rotate(-20deg);
     text-align: left;
 }
 .banner-title {
-    position: absolute;
-    left: 120px;
+    /*position: absolute;*/
     width: 600px;
-    top: 245px;
+    /*left: 120px;
+    top: 245px;*/
     color: #333;
-    transform: rotate(-20deg);
     text-align: left;
 }
 .banner-content {
-    position: absolute;
+    /*position: absolute;*/
     width: 500px;
     height: 95px;
-    left: 180px;
-    top: 444px;
+    /*left: 180px;
+    top: 444px;*/
     color: #333;
-    transform: rotate(-20deg);
     text-align: left;
     z-index: 1;
 }
 .header-banner-btn {
     width: 160px;
     padding: 11px 20px;
-    position: absolute;
+    /*position: absolute;
     left: 215px;
-    top: 612px;
-    transform: rotate(-20deg);
+    top: 612px;*/
     margin-top: 0;
 }
 .main-iframe-2 {
@@ -899,6 +909,12 @@ box-shadow: 0px 2.5px 0px 1px rgba(0,0,0,0.1);
         border-bottom-right-radius: 0;
         max-width: 89%;
         margin: 0 auto
+    }
+    .layer-content {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: none;
     }
     .small-banner-title {
         position: relative;

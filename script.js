@@ -170,19 +170,17 @@ for(var i = 0;i < inputs.length; i++) {
 var toggle_input = 0
  function toggle_enable(e) {
      if(toggle_input) {
-        for(var i = 0;i < inputs.length; i++) {
-                inputs[i].classList.add("disable-input")
-                inputs[i].disabled = true
-                inputs[i].classList.remove("required-input")
-        }
+                inputs[1].classList.add("disable-input")
+                inputs[1].disabled = true
+                inputs[1].classList.remove("required-input")
         toggle_input = 0
      }
      else {
-        for(var i = 0;i < inputs.length; i++) {
-                inputs[i].classList.remove("disable-input")
-                inputs[i].classList.remove("required-input")
-                inputs[i].disabled = false
-            }
+        
+                inputs[1].classList.remove("disable-input")
+                inputs[1].classList.remove("required-input")
+                inputs[1].disabled = false
+            
         toggle_input = 1
      }
  }
@@ -359,36 +357,56 @@ var new_p3;
 
 //tab 3
 tab_target_dropdown.addEventListener("click", tab_drop)
-
+var drop_toggle_1 = 0;
 function tab_drop(e) {
 
+    if(drop_toggle_1) {
+        tab_dropdown.classList.remove("expanded-tab")
+        drop_toggle_1 = 0;
+    }
+    else {
         for(var index = 0; index < tab_dropdowns.length; index++) {
             tab_dropdowns[index].classList.remove("expanded-tab")
         }
         tab_dropdown.classList.add("expanded-tab")
-
+        drop_toggle_1 = 1;
+    }
 
 }
 
 //
 tab_target_dropdown_2.addEventListener("click", tab_drop_2)
-
+var drop_toggle_2 = 0;
 function tab_drop_2(e) {
+    if(drop_toggle_2) {
+        tab_dropdown_2.classList.remove("expanded-tab")
+        drop_toggle_2 = 0;
+    }
+    else {
         for(var index = 0; index < tab_dropdowns.length; index++) {
             tab_dropdowns[index].classList.remove("expanded-tab")
         }
         tab_dropdown_2.classList.add("expanded-tab")
+        drop_toggle_2 = 1;
+    }
 
 }
 
 //
 tab_target_dropdown_3.addEventListener("click", tab_drop_3)
-
+var drop_toggle_3 = 0;
 function tab_drop_3(e) {
+    if(drop_toggle_3) {
+        tab_dropdown_3.classList.remove("expanded-tab")
+        drop_toggle_3 = 0;
+    }
+    else {
         for(var index = 0; index < tab_dropdowns.length; index++) {
             tab_dropdowns[index].classList.remove("expanded-tab")
         }
         tab_dropdown_3.classList.add("expanded-tab")
+        drop_toggle_3 = 1;
+    }
 
 }
 

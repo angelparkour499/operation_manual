@@ -262,7 +262,7 @@ var new_p1;
      var c = z.slice(0, -z.length+10).join(" ")
      document.getElementsByClassName("tab-paragraph")[0].innerText = c
       new_p1 = c
-      tab_2_load[0].innerText = "load more"
+      tab_2_load[0].innerText = "show more"
     }
     else {
       return
@@ -273,13 +273,13 @@ var new_p1;
   function toggle_paragraph_content_1 (e) {
     if(toggle_paragraph_1) {
         document.getElementsByClassName("tab-paragraph")[0].innerText = paragraph_1
-        tab_2_load[0].innerText = "load less"
+        tab_2_load[0].innerText = "show less"
         tab_2[0].style.height = "350px"
       toggle_paragraph_1 = 0
     }
     else {
         document.getElementsByClassName("tab-paragraph")[0].innerText = new_p1
-        tab_2_load[0].innerText = "load more"
+        tab_2_load[0].innerText = "show more"
         tab_2[0].style.height = "auto"
         toggle_paragraph_1 = 1
     }
@@ -295,7 +295,7 @@ var new_p2;
      var c = z.slice(0, -z.length+10).join(" ")
      document.getElementsByClassName("tab-paragraph")[1].innerText = c
       new_p2 = c
-      tab_2_load[1].innerText = "load more"
+      tab_2_load[1].innerText = "show more"
     }
     else {
       return
@@ -306,13 +306,13 @@ var new_p2;
   function toggle_paragraph_content_2 (e) {
     if(toggle_paragraph_2) {
         document.getElementsByClassName("tab-paragraph")[1].innerText = paragraph_2
-        tab_2_load[1].innerText = "load less"
+        tab_2_load[1].innerText = "show less"
         tab_2[1].style.height = "350px"
       toggle_paragraph_2 = 0
     }
     else {
         document.getElementsByClassName("tab-paragraph")[1].innerText = new_p2
-        tab_2_load[1].innerText = "load more"
+        tab_2_load[1].innerText = "show more"
         tab_2[1].style.height = "auto"
         toggle_paragraph_2 = 1
     }
@@ -329,7 +329,7 @@ var new_p3;
      var c = z.slice(0, -z.length+10).join(" ")
      document.getElementsByClassName("tab-paragraph")[2].innerText = c
       new_p3 = c
-      tab_2_load[2].innerText = "load more"
+      tab_2_load[2].innerText = "show more"
     }
     else {
       return
@@ -340,13 +340,13 @@ var new_p3;
   function toggle_paragraph_content_3 (e) {
     if(toggle_paragraph_3) {
         document.getElementsByClassName("tab-paragraph")[2].innerText = paragraph_3
-        tab_2_load[2].innerText = "load less"
+        tab_2_load[2].innerText = "show less"
         tab_2[2].style.height = "350px"
       toggle_paragraph_3 = 0
     }
     else {
         document.getElementsByClassName("tab-paragraph")[2].innerText = new_p3
-        tab_2_load[2].innerText = "load more"
+        tab_2_load[2].innerText = "show more"
         tab_2[2].style.height = "auto"
         toggle_paragraph_3 = 1
     }

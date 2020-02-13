@@ -234,7 +234,7 @@ body {
     outline: none;
   }
   .button:disabled {
-    background-color: #cdcdcd;
+    background-color: #999999;
     color: #333333;
     border: none;
     box-shadow: none;
@@ -295,7 +295,7 @@ body {
       mix-blend-mode: normal;
       transition-duration: .3s;
       cursor: pointer;
-      background-color: #cdcdcd;
+      background-color: #999999;
       color: #333333;
       border: none;
       box-shadow: none;
@@ -603,7 +603,7 @@ margin-bottom: 0;
     position: relative;
     display: flex;
     justify-content: center;
-    padding-left: 100px;
+    padding-left: 77px;
 }
 /* The container */
 .checkbox-container {
@@ -668,10 +668,10 @@ margin-bottom: 0;
   
   /* Style the checkmark/indicator */
   .checkbox-container .checkmark:after {
-    left: 5px;
-    top: -2px;
-    width: 8px;
-    height: 15px;
+    left: 6px;
+    top: 1px;
+    width: 6px;
+    height: 12px;
     border: solid #ffffff;
     border-width: 0 2px 2px 0;
     -webkit-transform: rotate(45deg);
@@ -1358,7 +1358,7 @@ display: none;
       flex-flow: column nowrap;
       justify-content: center;
       align-items: center;
-      border: 0.5px solid #A3B4B9;
+      border: 0.5px solid #cdcdcd;
       border-radius: 4px;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.124321);
       margin: 20px;
@@ -1387,7 +1387,8 @@ display: none;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    border: 0.5px solid #A3B4B9;
+    background-color: #ffffff;
+    border: 0.5px solid #cdcdcd;
     border-radius: 4px;
     margin: 20px;
     box-sizing: border-box;
@@ -1407,12 +1408,13 @@ display: none;
     max-height: 350px;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    border: 0.5px solid #A3B4B9;
+    border: 0.5px solid #cdcdcd;
     border-radius: 4px;
     margin: 5px 20px;
     padding: 10px;
+    padding-bottom: 29px;
     box-sizing: border-box;
     cursor: pointer;
   }
@@ -1429,6 +1431,10 @@ display: none;
     text-align: center;
     margin-bottom: 10px;
 }
+.tab-load {
+    position: absolute;
+    bottom: 10px;
+}
 
 
   .selected-tab {
@@ -1441,7 +1447,7 @@ display: none;
   .tab-dropdown {
       width: 90%;
       margin: auto;
-      border: 0.5px solid #A3B4B9;
+      border: 0.5px solid #cdcdcd;
       border-radius: 4px;
       height: auto;
       max-height: 48px;
